@@ -365,7 +365,9 @@ const QuizApp = ({ questions, error, availableSports = ['mlb'] }) => {
     return (
       <div className="sport-selection-screen">
         <h1>The Ball Knowers</h1>
-        <p>Welcome, {playerName}! Choose your sport to settle the score:</p>
+        <p className="welcome-message">
+          Welcome, {playerName}! Choose your sport to settle the score: (v1.1)
+        </p>
         
         <div className="sports-grid">
           {availableSports.map((sport, index) => (
