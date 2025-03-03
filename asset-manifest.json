@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ball-knowers/static/css/main.526e61d2.css",
+    "main.js": "/ball-knowers/static/js/main.8c12e7e0.js",
+    "static/js/453.e1c17870.chunk.js": "/ball-knowers/static/js/453.e1c17870.chunk.js",
+    "index.html": "/ball-knowers/index.html",
+    "main.526e61d2.css.map": "/ball-knowers/static/css/main.526e61d2.css.map",
+    "main.8c12e7e0.js.map": "/ball-knowers/static/js/main.8c12e7e0.js.map",
+    "453.e1c17870.chunk.js.map": "/ball-knowers/static/js/453.e1c17870.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.526e61d2.css",
+    "static/js/main.8c12e7e0.js"
+  ]
+}
