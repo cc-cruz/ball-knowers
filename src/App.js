@@ -35,6 +35,30 @@ function App() {
           if (nbaResponse.ok) {
             const nbaData = await nbaResponse.json();
             allSportsQuestions.nba = nbaData;
+            
+            // Also fetch NBA Pop Culture questions and merge them with NBA questions
+            try {
+              const nbaPopCultureResponse = await fetch(`${process.env.PUBLIC_URL}/data/nba-pop-culture-questions.json`);
+              if (nbaPopCultureResponse.ok) {
+                const nbaPopCultureData = await nbaPopCultureResponse.json();
+                
+                // Merge the questions by difficulty level
+                Object.keys(nbaPopCultureData).forEach(difficulty => {
+                  if (allSportsQuestions.nba[difficulty]) {
+                    allSportsQuestions.nba[difficulty] = [
+                      ...allSportsQuestions.nba[difficulty],
+                      ...nbaPopCultureData[difficulty]
+                    ];
+                  } else {
+                    allSportsQuestions.nba[difficulty] = nbaPopCultureData[difficulty];
+                  }
+                });
+              } else {
+                console.warn('Failed to load NBA Pop Culture questions');
+              }
+            } catch (nbaPopCultureError) {
+              console.warn('Error loading NBA Pop Culture questions:', nbaPopCultureError);
+            }
           } else {
             console.warn('Failed to load NBA questions');
           }
@@ -48,37 +72,35 @@ function App() {
           if (nflResponse.ok) {
             const nflData = await nflResponse.json();
             allSportsQuestions.nfl = nflData;
+            
+            // Also fetch NFL Scandal questions and merge them with NFL questions
+            try {
+              const nflScandalResponse = await fetch(`${process.env.PUBLIC_URL}/data/nfl-scandal-questions.json`);
+              if (nflScandalResponse.ok) {
+                const nflScandalData = await nflScandalResponse.json();
+                
+                // Merge the questions by difficulty level
+                Object.keys(nflScandalData).forEach(difficulty => {
+                  if (allSportsQuestions.nfl[difficulty]) {
+                    allSportsQuestions.nfl[difficulty] = [
+                      ...allSportsQuestions.nfl[difficulty],
+                      ...nflScandalData[difficulty]
+                    ];
+                  } else {
+                    allSportsQuestions.nfl[difficulty] = nflScandalData[difficulty];
+                  }
+                });
+              } else {
+                console.warn('Failed to load NFL Scandal questions');
+              }
+            } catch (nflScandalError) {
+              console.warn('Error loading NFL Scandal questions:', nflScandalError);
+            }
           } else {
             console.warn('Failed to load NFL questions');
           }
         } catch (nflError) {
           console.warn('Error loading NFL questions:', nflError);
-        }
-        
-        // Fetch NBA Pop Culture questions
-        try {
-          const nbaPopCultureResponse = await fetch(`${process.env.PUBLIC_URL}/data/nba-pop-culture-questions.json`);
-          if (nbaPopCultureResponse.ok) {
-            const nbaPopCultureData = await nbaPopCultureResponse.json();
-            allSportsQuestions.nbapopculture = nbaPopCultureData;
-          } else {
-            console.warn('Failed to load NBA Pop Culture questions');
-          }
-        } catch (nbaPopCultureError) {
-          console.warn('Error loading NBA Pop Culture questions:', nbaPopCultureError);
-        }
-        
-        // Fetch NFL Scandal questions
-        try {
-          const nflScandalResponse = await fetch(`${process.env.PUBLIC_URL}/data/nfl-scandal-questions.json`);
-          if (nflScandalResponse.ok) {
-            const nflScandalData = await nflScandalResponse.json();
-            allSportsQuestions.nflscandal = nflScandalData;
-          } else {
-            console.warn('Failed to load NFL Scandal questions');
-          }
-        } catch (nflScandalError) {
-          console.warn('Error loading NFL Scandal questions:', nflScandalError);
         }
         
         // Check if we have any questions

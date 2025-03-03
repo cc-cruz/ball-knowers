@@ -26,18 +26,6 @@ const SPORTS_CONFIG = {
     color: '#013369', 
     secondaryColor: '#D50A0A',
     icon: '🏈'
-  },
-  nbapopculture: {
-    name: 'NBA Pop Culture',
-    color: '#6F2DA8', // Purple color for pop culture
-    secondaryColor: '#FFC72C', // Gold color
-    icon: '🎬'
-  },
-  nflscandal: {
-    name: 'NFL Scandals',
-    color: '#831618', // Dark red for scandals
-    secondaryColor: '#000000', // Black
-    icon: '📰'
   }
 };
 
