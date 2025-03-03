@@ -1,0 +1,128 @@
+{
+  "easy": [
+    {
+      "question": "Which team won the 2020 World Series?",
+      "options": ["Tampa Bay Rays", "Los Angeles Dodgers", "Atlanta Braves", "Houston Astros"],
+      "correctAnswer": "Los Angeles Dodgers",
+      "hint": "They defeated the Tampa Bay Rays in six games.",
+      "image": "baseball-trophy",
+      "category": "2020s Champions"
+    },
+    {
+      "question": "Which player holds the MLB record for most home runs in a single season?",
+      "options": ["Babe Ruth", "Mark McGwire", "Barry Bonds", "Sammy Sosa"],
+      "correctAnswer": "Barry Bonds",
+      "hint": "He hit 73 home runs in 2001 for the San Francisco Giants.",
+      "image": "baseball-player",
+      "category": "Hitting Records"
+    },
+    {
+      "question": "Which team did Derek Jeter play his entire MLB career for?",
+      "options": ["Boston Red Sox", "New York Yankees", "Chicago Cubs", "Los Angeles Dodgers"],
+      "correctAnswer": "New York Yankees",
+      "hint": "He was the captain of this team and won five World Series with them.",
+      "image": "baseball-player",
+      "category": "Player Careers"
+    },
+    {
+      "question": "Which pitcher threw a perfect game in the 2010 season?",
+      "options": ["Roy Halladay", "Dallas Braden", "Armando Galarraga", "Felix Hernandez"],
+      "correctAnswer": "Roy Halladay",
+      "hint": "This Phillies pitcher also threw a no-hitter in the playoffs that same year.",
+      "image": "baseball-pitcher",
+      "category": "Pitching Feats"
+    },
+    {
+      "question": "Which team broke the 'Curse of the Bambino' by winning the 2004 World Series?",
+      "options": ["Chicago Cubs", "Boston Red Sox", "Cleveland Indians", "San Francisco Giants"],
+      "correctAnswer": "Boston Red Sox",
+      "hint": "They came back from a 3-0 deficit against the Yankees in the ALCS that year.",
+      "image": "baseball-celebration",
+      "category": "2000s Champions"
+    }
+  ],
+  "medium": [
+    {
+      "question": "Which player hit a walk-off home run to win the 1993 World Series?",
+      "options": ["Joe Carter", "Paul Molitor", "Roberto Alomar", "John Olerud"],
+      "correctAnswer": "Joe Carter",
+      "hint": "His home run off Mitch Williams gave the Blue Jays their second consecutive championship.",
+      "image": "baseball-celebration",
+      "category": "World Series Moments"
+    },
+    {
+      "question": "Which pitcher holds the record for most strikeouts in a single season?",
+      "options": ["Nolan Ryan", "Randy Johnson", "Sandy Koufax", "Max Scherzer"],
+      "correctAnswer": "Nolan Ryan",
+      "hint": "He struck out 383 batters in 1973 with the California Angels.",
+      "image": "baseball-pitcher",
+      "category": "Pitching Records"
+    },
+    {
+      "question": "Which team won three consecutive World Series from 1972-1974?",
+      "options": ["Cincinnati Reds", "New York Yankees", "Oakland Athletics", "Baltimore Orioles"],
+      "correctAnswer": "Oakland Athletics",
+      "hint": "They were managed by Dick Williams and featured stars like Reggie Jackson and Catfish Hunter.",
+      "image": "baseball-team",
+      "category": "1970s Champions"
+    },
+    {
+      "question": "Which player was the first to have his number retired by all MLB teams?",
+      "options": ["Babe Ruth", "Jackie Robinson", "Lou Gehrig", "Hank Aaron"],
+      "correctAnswer": "Jackie Robinson",
+      "hint": "His number 42 was universally retired in 1997, 50 years after he broke the color barrier.",
+      "image": "baseball-player",
+      "category": "MLB History"
+    },
+    {
+      "question": "Which pitcher threw a no-hitter while on LSD in 1970?",
+      "options": ["Nolan Ryan", "Dock Ellis", "Bob Gibson", "Tom Seaver"],
+      "correctAnswer": "Dock Ellis",
+      "hint": "This Pirates pitcher later became an anti-drug advocate.",
+      "image": "baseball-pitcher",
+      "category": "Unusual Feats"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Which player holds the record for most consecutive games played (2,632)?",
+      "options": ["Lou Gehrig", "Cal Ripken Jr.", "Pete Rose", "Derek Jeter"],
+      "correctAnswer": "Cal Ripken Jr.",
+      "hint": "This Orioles shortstop/third baseman broke Lou Gehrig's previous record of 2,130 games.",
+      "image": "baseball-player",
+      "category": "Endurance Records"
+    },
+    {
+      "question": "Which pitcher threw 7 no-hitters in his career, the most in MLB history?",
+      "options": ["Sandy Koufax", "Cy Young", "Roger Clemens", "Nolan Ryan"],
+      "correctAnswer": "Nolan Ryan",
+      "hint": "This power pitcher also holds the record for most career strikeouts.",
+      "image": "baseball-pitcher",
+      "category": "Pitching Records"
+    },
+    {
+      "question": "Which team came back from a 3-0 deficit to win a playoff series in 2004?",
+      "options": ["Boston Red Sox", "New York Yankees", "Chicago Cubs", "St. Louis Cardinals"],
+      "correctAnswer": "Boston Red Sox",
+      "hint": "They accomplished this against the Yankees in the ALCS before winning the World Series.",
+      "image": "baseball-comeback",
+      "category": "Playoff Records"
+    },
+    {
+      "question": "Which player hit 4 home runs in a single game on June 6, 2017?",
+      "options": ["Bryce Harper", "Giancarlo Stanton", "Scooter Gennett", "Aaron Judge"],
+      "correctAnswer": "Scooter Gennett",
+      "hint": "This Reds second baseman was an unlikely candidate to join this exclusive club.",
+      "image": "baseball-hitting",
+      "category": "Single-Game Records"
+    },
+    {
+      "question": "Which pitcher holds the record for most wins in a single season in the modern era (post-1900)?",
+      "options": ["Cy Young", "Walter Johnson", "Jack Chesbro", "Denny McLain"],
+      "correctAnswer": "Jack Chesbro",
+      "hint": "He won 41 games for the New York Highlanders (later Yankees) in 1904.",
+      "image": "baseball-pitcher",
+      "category": "Pitching Records"
+    }
+  ]
+} 

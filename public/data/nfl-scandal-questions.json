@@ -1,0 +1,152 @@
+{
+  "easy": [
+    {
+      "question": "Which controversy involved the New England Patriots using under-inflated footballs in the 2015 AFC Championship game?",
+      "options": ["Spygate", "Deflategate", "Bountygate", "Ballgate"],
+      "correctAnswer": "Deflategate",
+      "hint": "This scandal resulted in Tom Brady being suspended for four games.",
+      "image": "football-scandal",
+      "category": "NFL Controversies"
+    },
+    {
+      "question": "Which NFL player sparked national debate by kneeling during the national anthem starting in 2016?",
+      "options": ["Colin Kaepernick", "Eric Reid", "Malcolm Jenkins", "Kenny Stills"],
+      "correctAnswer": "Colin Kaepernick",
+      "hint": "This 49ers quarterback was protesting racial injustice and police brutality.",
+      "image": "football-protest",
+      "category": "NFL Social Movements"
+    },
+    {
+      "question": "Which NFL team was involved in a sign-stealing scandal where they videotaped opposing teams' signals?",
+      "options": ["New England Patriots", "New Orleans Saints", "Pittsburgh Steelers", "Kansas City Chiefs"],
+      "correctAnswer": "New England Patriots",
+      "hint": "This team's head coach was fined $500,000 for this scandal known as 'Spygate'.",
+      "image": "football-controversy",
+      "category": "NFL Cheating Scandals"
+    },
+    {
+      "question": "Which NFL running back was suspended for most of the 2017 season due to domestic violence allegations?",
+      "options": ["Adrian Peterson", "Ezekiel Elliott", "Kareem Hunt", "Ray Rice"],
+      "correctAnswer": "Ezekiel Elliott",
+      "hint": "This Dallas Cowboys star was initially suspended for six games.",
+      "image": "football-suspension",
+      "category": "NFL Player Conduct"
+    },
+    {
+      "question": "Who was the NFL Commissioner during the 'Deflategate' and 'Bountygate' scandals?",
+      "options": ["Paul Tagliabue", "Roger Goodell", "Pete Rozelle", "David Stern"],
+      "correctAnswer": "Roger Goodell",
+      "hint": "He became Commissioner in 2006 and has handled numerous high-profile controversies.",
+      "image": "football-executive",
+      "category": "NFL Management"
+    },
+    {
+      "question": "Which NFL star was released by the Raiders after multiple off-field incidents before joining the Buccaneers in 2020?",
+      "options": ["Odell Beckham Jr.", "Le'Veon Bell", "Antonio Brown", "Josh Gordon"],
+      "correctAnswer": "Antonio Brown",
+      "hint": "This wide receiver's behavior included livestreaming from the locker room and freezing his feet in cryotherapy.",
+      "image": "football-controversy",
+      "category": "NFL Player Conduct"
+    }
+  ],
+  "medium": [
+    {
+      "question": "What NFL scandal involved the Patriots illegally filming opposing teams' signals in 2007?",
+      "options": ["Videogate", "Cameragate", "Spygate", "Signalgate"],
+      "correctAnswer": "Spygate",
+      "hint": "Coach Bill Belichick was fined $500,000, the largest fine for a coach in NFL history at that time.",
+      "image": "football-controversy",
+      "category": "NFL Scandals"
+    },
+    {
+      "question": "What Super Bowl Halftime Show created controversy due to a 'wardrobe malfunction' in 2004?",
+      "options": ["Madonna and LMFAO", "Janet Jackson and Justin Timberlake", "Katy Perry and Missy Elliott", "The Who"],
+      "correctAnswer": "Janet Jackson and Justin Timberlake",
+      "hint": "This incident led to increased FCC scrutiny and fines for broadcast television.",
+      "image": "football-halftime",
+      "category": "Super Bowl Controversies"
+    },
+    {
+      "question": "Which NFL player was caught on video shoving and kicking a woman in a hotel in 2018, leading to his release?",
+      "options": ["Ray Rice", "Tyreek Hill", "Kareem Hunt", "Joe Mixon"],
+      "correctAnswer": "Kareem Hunt",
+      "hint": "He was released by the Kansas City Chiefs but later signed with the Cleveland Browns.",
+      "image": "football-misconduct",
+      "category": "NFL Violence Scandals"
+    },
+    {
+      "question": "Which Indianapolis Colts owner was arrested in 2014 for DUI and drug possession?",
+      "options": ["Robert Kraft", "Jerry Jones", "Jim Irsay", "Arthur Blank"],
+      "correctAnswer": "Jim Irsay",
+      "hint": "This owner was suspended for six games and fined $500,000 by the NFL.",
+      "image": "football-legal",
+      "category": "NFL Owner Scandals"
+    },
+    {
+      "question": "Which team's bullying scandal involved Jonathan Martin and Richie Incognito in 2013?",
+      "options": ["Miami Dolphins", "Oakland Raiders", "New York Jets", "Tampa Bay Buccaneers"],
+      "correctAnswer": "Miami Dolphins",
+      "hint": "This offensive line controversy led to an NFL investigation into workplace harassment.",
+      "image": "football-controversy",
+      "category": "NFL Team Culture"
+    },
+    {
+      "question": "Which NFL star was suspended for the entire 2016 season for violating the league's substance abuse policy?",
+      "options": ["Josh Gordon", "Martavis Bryant", "Aldon Smith", "Randy Gregory"],
+      "correctAnswer": "Josh Gordon",
+      "hint": "This talented Browns wide receiver battled substance abuse throughout his career.",
+      "image": "football-suspension",
+      "category": "NFL Drug Policies"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Which team was involved in 'Bountygate,' where players were paid bonuses for injuring opponents?",
+      "options": ["Pittsburgh Steelers", "New Orleans Saints", "Oakland Raiders", "Baltimore Ravens"],
+      "correctAnswer": "New Orleans Saints",
+      "hint": "This scandal resulted in their head coach being suspended for the entire 2012 season.",
+      "image": "football-bounty",
+      "category": "NFL Scandals"
+    },
+    {
+      "question": "Which former Patriots tight end was convicted of murder in 2013?",
+      "options": ["Rob Gronkowski", "Aaron Hernandez", "Benjamin Watson", "Jimmy Graham"],
+      "correctAnswer": "Aaron Hernandez",
+      "hint": "He was found guilty of first-degree murder while playing for New England.",
+      "image": "football-legal",
+      "category": "NFL Criminal Cases"
+    },
+    {
+      "question": "Which NFL player was involved in a dogfighting scandal that resulted in a prison sentence in 2007?",
+      "options": ["Ray Lewis", "Michael Vick", "Adrian Peterson", "Ray Rice"],
+      "correctAnswer": "Michael Vick",
+      "hint": "This quarterback served 21 months in federal prison before returning to the NFL.",
+      "image": "football-legal",
+      "category": "NFL Criminal Cases"
+    },
+    {
+      "question": "In the 'DeflateGate' scandal, how many games was Tom Brady initially suspended for?",
+      "options": ["2 games", "4 games", "6 games", "8 games"],
+      "correctAnswer": "4 games",
+      "hint": "The suspension was upheld after Brady fought it through the courts.",
+      "image": "football-suspension",
+      "category": "NFL Punishments"
+    },
+    {
+      "question": "Which Steelers quarterback was accused of sexual assault in 2010, resulting in a six-game suspension?",
+      "options": ["Terry Bradshaw", "Ben Roethlisberger", "Kordell Stewart", "Tommy Maddox"],
+      "correctAnswer": "Ben Roethlisberger",
+      "hint": "His suspension was later reduced to four games, and no criminal charges were filed.",
+      "image": "football-legal",
+      "category": "NFL Conduct Policies"
+    },
+    {
+      "question": "Who leaked the infamous 'Dez Caught It' footage from the 2014 playoffs before the official review?",
+      "options": ["Jerry Jones", "Roger Goodell", "Dean Blandino", "Mike Pereira"],
+      "correctAnswer": "Dean Blandino",
+      "hint": "He was the NFL's VP of Officiating who later admitted the call was debatable.",
+      "image": "football-officiating",
+      "category": "NFL Officiating Controversies"
+    }
+  ]
+} 

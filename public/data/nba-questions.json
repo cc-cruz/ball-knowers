@@ -1,0 +1,128 @@
+{
+  "easy": [
+    {
+      "question": "Which team won three consecutive NBA championships from 2000-2002?",
+      "options": ["San Antonio Spurs", "Los Angeles Lakers", "Detroit Pistons", "Miami Heat"],
+      "correctAnswer": "Los Angeles Lakers",
+      "hint": "They were led by Kobe Bryant and Shaquille O'Neal.",
+      "image": "basketball-trophy",
+      "category": "2000s Champions"
+    },
+    {
+      "question": "Which player was nicknamed 'The King' during his career?",
+      "options": ["Kevin Durant", "Stephen Curry", "LeBron James", "Kobe Bryant"],
+      "correctAnswer": "LeBron James",
+      "hint": "He was the first overall pick in the 2003 NBA Draft out of high school.",
+      "image": "basketball-player",
+      "category": "Player Nicknames"
+    },
+    {
+      "question": "Which team did Kawhi Leonard lead to their first NBA championship in 2019?",
+      "options": ["Toronto Raptors", "Brooklyn Nets", "Los Angeles Clippers", "Milwaukee Bucks"],
+      "correctAnswer": "Toronto Raptors",
+      "hint": "They defeated the Golden State Warriors in the NBA Finals.",
+      "image": "basketball-celebration",
+      "category": "2010s Champions"
+    },
+    {
+      "question": "Which player won MVP awards with three different teams?",
+      "options": ["LeBron James", "Kevin Durant", "James Harden", "Stephen Curry"],
+      "correctAnswer": "LeBron James",
+      "hint": "He won MVPs with the Cavaliers, Heat, and Lakers.",
+      "image": "basketball-trophy",
+      "category": "MVP Awards"
+    },
+    {
+      "question": "Which player was known as 'The Greek Freak'?",
+      "options": ["Luka Dončić", "Nikola Jokić", "Giannis Antetokounmpo", "Kristaps Porziņģis"],
+      "correctAnswer": "Giannis Antetokounmpo",
+      "hint": "This Milwaukee Bucks star led his team to the 2021 NBA championship.",
+      "image": "basketball-player",
+      "category": "Player Nicknames"
+    }
+  ],
+  "medium": [
+    {
+      "question": "Which player hit a buzzer-beater to win the 2019 Eastern Conference semifinals for the Raptors?",
+      "options": ["Kyle Lowry", "Pascal Siakam", "Kawhi Leonard", "Fred VanVleet"],
+      "correctAnswer": "Kawhi Leonard",
+      "hint": "His shot against the 76ers bounced on the rim four times before going in.",
+      "image": "basketball-action",
+      "category": "Playoff Moments"
+    },
+    {
+      "question": "Which team had a 27-game winning streak in the 2012-13 season?",
+      "options": ["San Antonio Spurs", "Miami Heat", "Oklahoma City Thunder", "Golden State Warriors"],
+      "correctAnswer": "Miami Heat",
+      "hint": "They were led by LeBron James, Dwyane Wade, and Chris Bosh.",
+      "image": "basketball-team",
+      "category": "Team Records"
+    },
+    {
+      "question": "Which player set the record for most three-pointers in a season with 402 in 2015-16?",
+      "options": ["Klay Thompson", "James Harden", "Stephen Curry", "Damian Lillard"],
+      "correctAnswer": "Stephen Curry",
+      "hint": "This Warriors guard also won unanimous MVP that season.",
+      "image": "basketball-action",
+      "category": "Shooting Records"
+    },
+    {
+      "question": "Which coach led the San Antonio Spurs to five NBA championships between 1999 and 2014?",
+      "options": ["Phil Jackson", "Gregg Popovich", "Pat Riley", "Erik Spoelstra"],
+      "correctAnswer": "Gregg Popovich",
+      "hint": "He's the longest-tenured active coach in major North American sports.",
+      "image": "basketball-coach",
+      "category": "Coaching Records"
+    },
+    {
+      "question": "Which player was the first to win MVP, Defensive Player of the Year, and Finals MVP in the same season?",
+      "options": ["LeBron James", "Michael Jordan", "Hakeem Olajuwon", "Giannis Antetokounmpo"],
+      "correctAnswer": "Hakeem Olajuwon",
+      "hint": "This Rockets center accomplished this feat in 1994.",
+      "image": "basketball-trophy",
+      "category": "Award Combinations"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Which player set the record for most points in an All-Star Game with 55 in 2023?",
+      "options": ["Giannis Antetokounmpo", "LeBron James", "Stephen Curry", "Jayson Tatum"],
+      "correctAnswer": "Jayson Tatum",
+      "hint": "This Celtics forward broke Anthony Davis's previous record of 52 points.",
+      "image": "basketball-allstar",
+      "category": "All-Star Records"
+    },
+    {
+      "question": "Which player holds the record for most consecutive games with a three-pointer made (157)?",
+      "options": ["Ray Allen", "Klay Thompson", "Stephen Curry", "James Harden"],
+      "correctAnswer": "Stephen Curry",
+      "hint": "This Warriors guard set this record between 2014 and 2016.",
+      "image": "basketball-shooter",
+      "category": "Shooting Streaks"
+    },
+    {
+      "question": "Which player recorded the first 5x5 game (at least 5 in all five major statistical categories) since 2006 in 2019?",
+      "options": ["Draymond Green", "Jusuf Nurkić", "Giannis Antetokounmpo", "Nikola Jokić"],
+      "correctAnswer": "Jusuf Nurkić",
+      "hint": "This Trail Blazers center had 24 points, 23 rebounds, 7 assists, 5 steals, and 5 blocks against the Kings.",
+      "image": "basketball-stats",
+      "category": "Statistical Rarities"
+    },
+    {
+      "question": "Which team came back from a 3-1 deficit in three consecutive playoff series in 2020?",
+      "options": ["Toronto Raptors", "Denver Nuggets", "Los Angeles Lakers", "Boston Celtics"],
+      "correctAnswer": "Denver Nuggets",
+      "hint": "They accomplished this in the bubble during the COVID-19 pandemic.",
+      "image": "basketball-comeback",
+      "category": "Playoff Records"
+    },
+    {
+      "question": "Which player scored 70 points in a game in 2017, the highest since Kobe Bryant's 81?",
+      "options": ["Damian Lillard", "Devin Booker", "James Harden", "Donovan Mitchell"],
+      "correctAnswer": "Devin Booker",
+      "hint": "This Suns guard was only 20 years old when he accomplished this feat against the Celtics.",
+      "image": "basketball-scoring",
+      "category": "Scoring Records"
+    }
+  ]
+} 
