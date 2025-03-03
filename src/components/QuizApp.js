@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { getSportIcon, getSportTitle, getSportFeedback } from './SportIcons';
+import { getSportFeedback } from './SportIcons';
 import './QuizApp.css';
 
 // Constants
