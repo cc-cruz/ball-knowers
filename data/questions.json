@@ -1,0 +1,296 @@
+{
+  "easy": [
+    {
+      "id": 1,
+      "question": "Which unexpected team won the 2003 World Series?",
+      "options": ["Tampa Bay Rays", "Florida Marlins", "Arizona Diamondbacks", "Colorado Rockies"],
+      "correctAnswer": "Florida Marlins",
+      "hint": "They were a wild card team with a young Miguel Cabrera and Josh Beckett.",
+      "image": "baseball-stadium",
+      "category": "2000s World Series"
+    },
+    {
+      "id": 2,
+      "question": "Which Rays pitcher won the 2012 AL Cy Young Award?",
+      "options": ["James Shields", "David Price", "Matt Moore", "Jeremy Hellickson"],
+      "correctAnswer": "David Price",
+      "hint": "He later played for the Tigers, Blue Jays and Red Sox.",
+      "image": "baseball-bat",
+      "category": "2010s Awards"
+    },
+    {
+      "id": 3,
+      "question": "Which player was known as 'The Flyin' Hawaiian' in the 2000s and 2010s?",
+      "options": ["Kurt Suzuki", "Benny Agbayani", "Troy Tulowitzki", "Shane Victorino"],
+      "correctAnswer": "Shane Victorino",
+      "hint": "He won World Series with both the Phillies and Red Sox.",
+      "image": "baseball-logo",
+      "category": "Player Nicknames"
+    },
+    {
+      "id": 4,
+      "question": "Which team did the Houston Astros defeat in the 2017 World Series?",
+      "options": ["Chicago Cubs", "Washington Nationals", "Los Angeles Dodgers", "Cleveland Indians"],
+      "correctAnswer": "Los Angeles Dodgers",
+      "hint": "This was before the Astros' sign-stealing scandal was uncovered.",
+      "image": "baseball-field",
+      "category": "2010s World Series"
+    },
+    {
+      "id": 5,
+      "question": "Which Oakland Athletics pitcher set an AL record with 20 consecutive wins in 2002?",
+      "options": ["Tim Hudson", "Barry Zito", "Mark Mulder", "Chad Bradford"],
+      "correctAnswer": "Barry Zito",
+      "hint": "He was part of Oakland's 'Big Three' pitchers and later signed with the Giants.",
+      "image": "baseball-trophy",
+      "category": "2000s Pitching"
+    },
+    {
+      "id": 6,
+      "question": "Which team won the 2004 World Series, breaking an 86-year championship drought?",
+      "options": ["New York Yankees", "Chicago Cubs", "Boston Red Sox", "Cleveland Indians"],
+      "correctAnswer": "Boston Red Sox",
+      "hint": "They came back from 0-3 down against the Yankees in the ALCS before winning the World Series.",
+      "image": "baseball-celebration",
+      "category": "2000s World Series"
+    },
+    {
+      "id": 7,
+      "question": "Which pitcher was known as 'King Felix' during his career with the Seattle Mariners?",
+      "options": ["Felix Doubront", "Felix Hernandez", "Pedro Martinez", "Johan Santana"],
+      "correctAnswer": "Felix Hernandez",
+      "hint": "He won the Cy Young Award in 2010 and pitched a perfect game in 2012.",
+      "image": "baseball-pitcher",
+      "category": "Player Nicknames"
+    },
+    {
+      "id": 8,
+      "question": "Which team did the Chicago Cubs defeat to win the 2016 World Series?",
+      "options": ["Cleveland Indians", "Kansas City Royals", "Los Angeles Dodgers", "New York Mets"],
+      "correctAnswer": "Cleveland Indians",
+      "hint": "The Cubs ended their 108-year championship drought in a dramatic 7-game series.",
+      "image": "baseball-trophy",
+      "category": "2010s World Series"
+    },
+    {
+      "id": 9,
+      "question": "Which Yankees closer retired in 2013 as MLB's all-time saves leader?",
+      "options": ["Trevor Hoffman", "Jonathan Papelbon", "Francisco Rodriguez", "Mariano Rivera"],
+      "correctAnswer": "Mariano Rivera",
+      "hint": "He was known for his cut fastball and became the first player unanimously elected to the Hall of Fame.",
+      "image": "baseball-pitcher",
+      "category": "Player Milestones"
+    },
+    {
+      "id": 10,
+      "question": "Which player set the single-season home run record with 73 in 2001?",
+      "options": ["Mark McGwire", "Sammy Sosa", "Barry Bonds", "Ken Griffey Jr."],
+      "correctAnswer": "Barry Bonds",
+      "hint": "This Giants slugger later became controversial due to PED allegations.",
+      "image": "baseball-homerun",
+      "category": "2000s Records"
+    },
+    {
+      "id": 11,
+      "question": "Which team won the 2020 World Series played during the COVID-shortened season?",
+      "options": ["Tampa Bay Rays", "Los Angeles Dodgers", "Atlanta Braves", "Houston Astros"],
+      "correctAnswer": "Los Angeles Dodgers",
+      "hint": "They defeated the Tampa Bay Rays in 6 games.",
+      "image": "baseball-trophy",
+      "category": "2020s World Series"
+    },
+    {
+      "id": 12,
+      "question": "Which player broke the MLB single-season rookie home run record in 2017?",
+      "options": ["Aaron Judge", "Cody Bellinger", "Pete Alonso", "Kris Bryant"],
+      "correctAnswer": "Aaron Judge",
+      "hint": "This Yankees outfielder hit 52 home runs as a rookie.",
+      "image": "baseball-homerun",
+      "category": "2010s Records"
+    }
+  ],
+  "medium": [
+    {
+      "id": 1,
+      "question": "Which player had the most home runs in the 2023 MLB season?",
+      "options": ["Aaron Judge", "Shohei Ohtani", "Matt Olson", "Pete Alonso"],
+      "correctAnswer": "Shohei Ohtani",
+      "hint": "This player is known for being both a pitcher and a hitter.",
+      "image": "baseball-player",
+      "category": "Recent Stats"
+    },
+    {
+      "id": 2,
+      "question": "Which pitcher threw a no-hitter in Game 4 of the 2010 NLDS?",
+      "options": ["Tim Lincecum", "Roy Halladay", "Cliff Lee", "Cole Hamels"],
+      "correctAnswer": "Roy Halladay",
+      "hint": "This Phillies pitcher also threw a perfect game earlier that same season.",
+      "image": "baseball-pitcher",
+      "category": "Playoff Performances"
+    },
+    {
+      "id": 3,
+      "question": "Which team had the 'Killer B's' in the late 1990s and early 2000s?",
+      "options": ["Boston Red Sox", "Baltimore Orioles", "Houston Astros", "Pittsburgh Pirates"],
+      "correctAnswer": "Houston Astros",
+      "hint": "Players included Craig Biggio and Jeff Bagwell.",
+      "image": "baseball-team",
+      "category": "Team Nicknames"
+    },
+    {
+      "id": 4,
+      "question": "Who was the last MLB player to win the Triple Crown before Miguel Cabrera in 2012?",
+      "options": ["Carl Yastrzemski", "Frank Robinson", "Mickey Mantle", "Ted Williams"],
+      "correctAnswer": "Carl Yastrzemski",
+      "hint": "This Red Sox legend accomplished the feat in 1967.",
+      "image": "baseball-trophy",
+      "category": "Batting Achievements"
+    },
+    {
+      "id": 5,
+      "question": "Which team did the Kansas City Royals defeat in the 2015 World Series?",
+      "options": ["San Francisco Giants", "New York Mets", "St. Louis Cardinals", "Toronto Blue Jays"],
+      "correctAnswer": "New York Mets",
+      "hint": "The Mets had a young pitching staff including Jacob deGrom and Noah Syndergaard.",
+      "image": "baseball-celebration",
+      "category": "2010s World Series"
+    },
+    {
+      "id": 6,
+      "question": "Which player holds the record for most consecutive games played?",
+      "options": ["Lou Gehrig", "Cal Ripken Jr.", "Pete Rose", "Derek Jeter"],
+      "correctAnswer": "Cal Ripken Jr.",
+      "hint": "This Orioles infielder played in 2,632 consecutive games, breaking the record in 1995.",
+      "image": "baseball-player",
+      "category": "1990s Records"
+    },
+    {
+      "id": 7,
+      "question": "Which pitcher threw a perfect game in the 2010 regular season and a no-hitter in the 2010 postseason?",
+      "options": ["Roy Halladay", "Tim Lincecum", "Justin Verlander", "Felix Hernandez"],
+      "correctAnswer": "Roy Halladay",
+      "hint": "This Phillies pitcher was known as 'Doc'.",
+      "image": "baseball-pitcher",
+      "category": "No-Hitters"
+    },
+    {
+      "id": 8,
+      "question": "Which player hit a walk-off home run to win the 1993 World Series?",
+      "options": ["Joe Carter", "Paul Molitor", "Roberto Alomar", "John Olerud"],
+      "correctAnswer": "Joe Carter",
+      "hint": "His home run for the Blue Jays came against Phillies closer Mitch Williams.",
+      "image": "baseball-homerun",
+      "category": "1990s World Series Moments"
+    },
+    {
+      "id": 9,
+      "question": "Which MLB stadium opened in 2000 and was the first retractable roof stadium in the National League?",
+      "options": ["Miller Park", "Minute Maid Park", "Chase Field", "T-Mobile Park"],
+      "correctAnswer": "Minute Maid Park",
+      "hint": "This stadium is home to the Houston Astros.",
+      "image": "baseball-stadium",
+      "category": "2000s Stadiums"
+    },
+    {
+      "id": 10,
+      "question": "Which player won the 2006 NL MVP despite his team missing the playoffs?",
+      "options": ["Albert Pujols", "Ryan Howard", "Chase Utley", "David Wright"],
+      "correctAnswer": "Ryan Howard",
+      "hint": "This Phillies first baseman hit 58 home runs that season.",
+      "image": "baseball-player",
+      "category": "2000s Awards"
+    }
+  ],
+  "hard": [
+    {
+      "id": 1,
+      "question": "Who led MLB in strikeouts for the 2023 season?",
+      "options": ["Gerrit Cole", "Spencer Strider", "Kevin Gausman", "Zack Wheeler"],
+      "correctAnswer": "Spencer Strider",
+      "hint": "This Atlanta Braves pitcher is known for his mustache and high velocity.",
+      "image": "baseball-pitcher",
+      "category": "Recent Stats"
+    },
+    {
+      "id": 2,
+      "question": "Which pitcher holds the record for most strikeouts in a single postseason?",
+      "options": ["Randy Johnson", "Curt Schilling", "Madison Bumgarner", "Clayton Kershaw"],
+      "correctAnswer": "Randy Johnson",
+      "hint": "This tall left-hander was known as 'The Big Unit'.",
+      "image": "baseball-pitcher",
+      "category": "Playoff Records"
+    },
+    {
+      "id": 3,
+      "question": "Which player has the most career grand slams in MLB history?",
+      "options": ["Alex Rodriguez", "Lou Gehrig", "Manny Ramirez", "Albert Pujols"],
+      "correctAnswer": "Alex Rodriguez",
+      "hint": "This Yankees and Mariners star finished with 696 career home runs.",
+      "image": "baseball-homerun",
+      "category": "Career Records"
+    },
+    {
+      "id": 4,
+      "question": "Which team won the most World Series titles in the 2010s decade?",
+      "options": ["San Francisco Giants", "Boston Red Sox", "Kansas City Royals", "Chicago Cubs"],
+      "correctAnswer": "San Francisco Giants",
+      "hint": "This team won in 2010, 2012, and 2014.",
+      "image": "baseball-trophy",
+      "category": "World Series History"
+    },
+    {
+      "id": 5,
+      "question": "Who is the only player to hit for the cycle in a postseason game?",
+      "options": ["Brock Holt", "Carlos Beltran", "Albert Pujols", "Derek Jeter"],
+      "correctAnswer": "Brock Holt",
+      "hint": "He accomplished this feat for the Boston Red Sox in 2018.",
+      "image": "baseball-field",
+      "category": "Playoff Records"
+    },
+    {
+      "id": 6,
+      "question": "Who is the only player to hit an inside-the-park home run in an All-Star Game since 2000?",
+      "options": ["Ichiro Suzuki", "Mike Trout", "Alfonso Soriano", "Ken Griffey Jr."],
+      "correctAnswer": "Ichiro Suzuki",
+      "hint": "This happened in the 2007 All-Star Game in San Francisco.",
+      "image": "baseball-homerun",
+      "category": "All-Star Game"
+    },
+    {
+      "id": 7,
+      "question": "Which pitcher tied the MLB record with 20 strikeouts in a 9-inning game in 2016?",
+      "options": ["Max Scherzer", "Chris Sale", "Clayton Kershaw", "Jake Arrieta"],
+      "correctAnswer": "Max Scherzer",
+      "hint": "This Nationals pitcher accomplished this feat against his former team, the Tigers.",
+      "image": "baseball-pitcher",
+      "category": "Pitching Records"
+    },
+    {
+      "id": 8,
+      "question": "Which player hit the most home runs in a single postseason?",
+      "options": ["Randy Arozarena", "Carlos Beltran", "Barry Bonds", "Nelson Cruz"],
+      "correctAnswer": "Randy Arozarena",
+      "hint": "This Rays outfielder hit 10 home runs in the 2020 postseason.",
+      "image": "baseball-homerun",
+      "category": "Playoff Records"
+    },
+    {
+      "id": 9,
+      "question": "Which pitcher had the lowest ERA in a single season since 2000 (minimum 150 innings)?",
+      "options": ["Zack Greinke", "Clayton Kershaw", "Jacob deGrom", "Pedro Martinez"],
+      "correctAnswer": "Zack Greinke",
+      "hint": "He posted a 1.66 ERA for the Dodgers in 2015.",
+      "image": "baseball-pitcher",
+      "category": "Pitching Records"
+    },
+    {
+      "id": 10,
+      "question": "Which team set the MLB record for most home runs in a single season in 2019?",
+      "options": ["New York Yankees", "Houston Astros", "Los Angeles Dodgers", "Minnesota Twins"],
+      "correctAnswer": "Minnesota Twins",
+      "hint": "This team was nicknamed the 'Bomba Squad' and hit 307 home runs.",
+      "image": "baseball-homerun",
+      "category": "Team Records"
+    }
+  ]
+}

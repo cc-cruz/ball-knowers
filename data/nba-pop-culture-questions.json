@@ -1,0 +1,152 @@
+{
+  "easy": [
+    {
+      "question": "Which NBA star headlined the 2021 movie 'Space Jam: A New Legacy'?",
+      "options": ["Stephen Curry", "Kevin Durant", "LeBron James", "Giannis Antetokounmpo"],
+      "correctAnswer": "LeBron James",
+      "hint": "He followed in Michael Jordan's footsteps from the 1996 original film.",
+      "image": "basketball-movie",
+      "category": "NBA Pop Culture"
+    },
+    {
+      "question": "Which NBA player has a signature Nike shoe line called 'Kyrie'?",
+      "options": ["Kyrie Irving", "Kevin Durant", "Paul George", "LeBron James"],
+      "correctAnswer": "Kyrie Irving",
+      "hint": "This point guard is known for his ball-handling skills and played for the Celtics and Nets.",
+      "image": "basketball-shoes",
+      "category": "NBA Merchandise"
+    },
+    {
+      "question": "Which NBA team does rapper Jay-Z formerly have an ownership stake in?",
+      "options": ["New York Knicks", "Brooklyn Nets", "Philadelphia 76ers", "Atlanta Hawks"],
+      "correctAnswer": "Brooklyn Nets",
+      "hint": "He helped move this franchise from New Jersey to his home borough in New York City.",
+      "image": "basketball-celebrity",
+      "category": "NBA Ownership"
+    },
+    {
+      "question": "Which NBA player starred alongside Adam Sandler in the 2019 film 'Uncut Gems'?",
+      "options": ["LeBron James", "Kevin Garnett", "Shaquille O'Neal", "Blake Griffin"],
+      "correctAnswer": "Kevin Garnett",
+      "hint": "This former Celtics and Timberwolves star played himself in the critically acclaimed thriller.",
+      "image": "basketball-movie",
+      "category": "NBA in Film"
+    },
+    {
+      "question": "Which NBA player appeared on the cover of NBA 2K21 following his tragic death?",
+      "options": ["Kobe Bryant", "Dirk Nowitzki", "Vince Carter", "Tim Duncan"],
+      "correctAnswer": "Kobe Bryant",
+      "hint": "This Lakers legend died in a helicopter crash in January 2020.",
+      "image": "basketball-videogame",
+      "category": "NBA Digital Media"
+    },
+    {
+      "question": "Which NBA team's dance squad was featured in the reality show 'Dallas Cowboys Cheerleaders: Making The Team'?",
+      "options": ["Dallas Mavericks", "Houston Rockets", "San Antonio Spurs", "Miami Heat"],
+      "correctAnswer": "Dallas Mavericks",
+      "hint": "This team is owned by billionaire Mark Cuban.",
+      "image": "basketball-entertainment",
+      "category": "NBA TV Shows"
+    }
+  ],
+  "medium": [
+    {
+      "question": "What was the name of LeBron James' televised 2010 announcement when he left Cleveland for Miami?",
+      "options": ["The Choice", "The Decision", "The Departure", "The Move"],
+      "correctAnswer": "The Decision",
+      "hint": "The controversial TV special raised millions for charity but was criticized for its approach.",
+      "image": "basketball-tv",
+      "category": "NBA Media Events"
+    },
+    {
+      "question": "Which rap artist became the 'Global Ambassador' for the Toronto Raptors and was known for his courtside antics?",
+      "options": ["Jay-Z", "Drake", "Kendrick Lamar", "Kanye West"],
+      "correctAnswer": "Drake",
+      "hint": "His courtside presence during the 2019 NBA Finals became a major storyline.",
+      "image": "basketball-celebrity",
+      "category": "NBA Celebrity Connections"
+    },
+    {
+      "question": "Which NBA star hosted Saturday Night Live in 2007, becoming one of the few NBA players to do so?",
+      "options": ["Kobe Bryant", "LeBron James", "Dwyane Wade", "Kevin Garnett"],
+      "correctAnswer": "LeBron James",
+      "hint": "He was only 22 years old at the time, making him one of the youngest hosts in the show's history.",
+      "image": "basketball-entertainment",
+      "category": "NBA in Television"
+    },
+    {
+      "question": "Which NBA player launched the podcast 'All The Smoke' with Stephen Jackson?",
+      "options": ["Matt Barnes", "Draymond Green", "JJ Redick", "Carmelo Anthony"],
+      "correctAnswer": "Matt Barnes",
+      "hint": "This former NBA journeyman played for teams including the Lakers, Clippers, and Warriors.",
+      "image": "basketball-media",
+      "category": "NBA Digital Media"
+    },
+    {
+      "question": "Which NBA coach made a cameo appearance in the TV show 'Portlandia'?",
+      "options": ["Phil Jackson", "Gregg Popovich", "Terry Stotts", "Steve Kerr"],
+      "correctAnswer": "Terry Stotts",
+      "hint": "He was coaching the Portland Trail Blazers at the time of his appearance.",
+      "image": "basketball-tv",
+      "category": "NBA in Television"
+    },
+    {
+      "question": "Which Warriors player was nicknamed 'China Klay' after his promotional tours in China went viral?",
+      "options": ["Klay Thompson", "Draymond Green", "Stephen Curry", "Kevin Durant"],
+      "correctAnswer": "Klay Thompson",
+      "hint": "This shooting guard became an internet sensation with videos of his dance moves and failed dunks in China.",
+      "image": "basketball-viral",
+      "category": "NBA Social Media"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Which NBA player won an Oscar in 2018 for his animated short film 'Dear Basketball'?",
+      "options": ["LeBron James", "Shaquille O'Neal", "Kobe Bryant", "Kevin Durant"],
+      "correctAnswer": "Kobe Bryant",
+      "hint": "The Lakers legend became the first professional athlete to win an Academy Award.",
+      "image": "basketball-award",
+      "category": "NBA Off-Court Achievements"
+    },
+    {
+      "question": "Which NBA star made headlines in 2017 for suggesting the Earth might be flat?",
+      "options": ["Kyrie Irving", "Draymond Green", "Joel Embiid", "Russell Westbrook"],
+      "correctAnswer": "Kyrie Irving",
+      "hint": "This point guard later apologized for the comments that sparked widespread debate.",
+      "image": "basketball-controversy",
+      "category": "NBA Controversies"
+    },
+    {
+      "question": "Which NBA player appeared in the 2015 Amy Schumer film 'Trainwreck'?",
+      "options": ["Blake Griffin", "LeBron James", "Dwight Howard", "Chris Paul"],
+      "correctAnswer": "LeBron James",
+      "hint": "He played himself as Bill Hader's best friend in this comedy.",
+      "image": "basketball-movie",
+      "category": "NBA in Film"
+    },
+    {
+      "question": "Which NBA player was caught using burner Twitter accounts to defend himself in 2017?",
+      "options": ["Kevin Durant", "Kyrie Irving", "Damian Lillard", "Paul George"],
+      "correctAnswer": "Kevin Durant",
+      "hint": "This star forward was caught tweeting about himself in the third person while with the Warriors.",
+      "image": "basketball-socialmedia",
+      "category": "NBA Social Media Controversies"
+    },
+    {
+      "question": "Which NBA All-Star appeared as a zombie in the TV show 'The Walking Dead'?",
+      "options": ["Chris Bosh", "Tim Duncan", "Kyrie Irving", "Blake Griffin"],
+      "correctAnswer": "Chris Bosh",
+      "hint": "This former Heat and Raptors star made a brief cameo as a walker in the popular zombie series.",
+      "image": "basketball-tv",
+      "category": "NBA TV Appearances"
+    },
+    {
+      "question": "In which music video did LeBron James appear alongside Drake in 2021?",
+      "options": ["Laugh Now Cry Later", "Way 2 Sexy", "Knife Talk", "Girls Want Girls"],
+      "correctAnswer": "Laugh Now Cry Later",
+      "hint": "The video was filmed at the Nike headquarters and featured several athletic competitions.",
+      "image": "basketball-music",
+      "category": "NBA in Music Videos"
+    }
+  ]
+} 

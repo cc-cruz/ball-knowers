@@ -1,0 +1,128 @@
+{
+  "easy": [
+    {
+      "question": "Which team won three Super Bowls between 2001 and 2004?",
+      "options": ["Pittsburgh Steelers", "New England Patriots", "Baltimore Ravens", "Indianapolis Colts"],
+      "correctAnswer": "New England Patriots",
+      "hint": "They were led by quarterback Tom Brady and coach Bill Belichick.",
+      "image": "football-trophy",
+      "category": "2000s Champions"
+    },
+    {
+      "question": "Which quarterback was nicknamed 'A-Rod'?",
+      "options": ["Andrew Luck", "Aaron Rodgers", "Alex Smith", "Andy Dalton"],
+      "correctAnswer": "Aaron Rodgers",
+      "hint": "This Green Bay Packers star won Super Bowl XLV and multiple MVP awards.",
+      "image": "football-player",
+      "category": "Player Nicknames"
+    },
+    {
+      "question": "Which team won Super Bowl LIV in 2020?",
+      "options": ["San Francisco 49ers", "Kansas City Chiefs", "New England Patriots", "Baltimore Ravens"],
+      "correctAnswer": "Kansas City Chiefs",
+      "hint": "They were led by quarterback Patrick Mahomes and defeated the 49ers.",
+      "image": "football-celebration",
+      "category": "2020s Champions"
+    },
+    {
+      "question": "Which player holds the NFL record for most passing yards in a single season?",
+      "options": ["Tom Brady", "Peyton Manning", "Drew Brees", "Patrick Mahomes"],
+      "correctAnswer": "Peyton Manning",
+      "hint": "He threw for 5,477 yards for the Denver Broncos in 2013.",
+      "image": "football-passing",
+      "category": "Passing Records"
+    },
+    {
+      "question": "Which team relocated from St. Louis to Los Angeles in 2016?",
+      "options": ["Chargers", "Raiders", "Rams", "Cardinals"],
+      "correctAnswer": "Rams",
+      "hint": "They had previously moved from Los Angeles to St. Louis in 1995.",
+      "image": "football-stadium",
+      "category": "Team Relocations"
+    }
+  ],
+  "medium": [
+    {
+      "question": "Which team had a perfect 16-0 regular season in 2007?",
+      "options": ["Indianapolis Colts", "New England Patriots", "Pittsburgh Steelers", "Green Bay Packers"],
+      "correctAnswer": "New England Patriots",
+      "hint": "They eventually lost in the Super Bowl to the New York Giants.",
+      "image": "football-team",
+      "category": "Team Records"
+    },
+    {
+      "question": "Which quarterback threw for 7 touchdowns in a single game in 2013?",
+      "options": ["Tom Brady", "Aaron Rodgers", "Peyton Manning", "Drew Brees"],
+      "correctAnswer": "Peyton Manning",
+      "hint": "He accomplished this in the season opener against the Baltimore Ravens.",
+      "image": "football-quarterback",
+      "category": "Single-Game Records"
+    },
+    {
+      "question": "Which player made the 'Helmet Catch' in Super Bowl XLII?",
+      "options": ["Plaxico Burress", "David Tyree", "Amani Toomer", "Steve Smith"],
+      "correctAnswer": "David Tyree",
+      "hint": "This miraculous catch helped the Giants upset the undefeated Patriots.",
+      "image": "football-catch",
+      "category": "Super Bowl Moments"
+    },
+    {
+      "question": "Which player returned a missed field goal 109 yards for a touchdown in 2013?",
+      "options": ["Devin Hester", "Antonio Cromartie", "Chris Johnson", "Chris Davis"],
+      "correctAnswer": "Chris Davis",
+      "hint": "This Auburn cornerback did it against Alabama in the Iron Bowl, known as the 'Kick Six.'",
+      "image": "football-return",
+      "category": "Special Teams Plays"
+    },
+    {
+      "question": "Which quarterback spent his entire 14-year career with the San Diego/Los Angeles Chargers?",
+      "options": ["Eli Manning", "Ben Roethlisberger", "Philip Rivers", "Matt Ryan"],
+      "correctAnswer": "Philip Rivers",
+      "hint": "He was drafted in 2004 in the same class as Eli Manning and Ben Roethlisberger.",
+      "image": "football-quarterback",
+      "category": "Player Careers"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Which team selected Giovanni Carmazzi in the 2000 NFL Draft, passing on Tom Brady?",
+      "options": ["San Francisco 49ers", "New England Patriots", "Pittsburgh Steelers", "New York Jets"],
+      "correctAnswer": "San Francisco 49ers",
+      "hint": "They selected him in the third round, while Brady went to the Patriots in the sixth round.",
+      "image": "football-draft",
+      "category": "Draft Decisions"
+    },
+    {
+      "question": "Which player caught the 'Fail Mary' controversial touchdown in 2012?",
+      "options": ["Golden Tate", "Doug Baldwin", "Sidney Rice", "Percy Harvin"],
+      "correctAnswer": "Golden Tate",
+      "hint": "This controversial call by replacement referees ended a Seahawks-Packers game.",
+      "image": "football-controversy",
+      "category": "Controversial Calls"
+    },
+    {
+      "question": "Which player scored a 99-yard touchdown reception against the Jets in 2018?",
+      "options": ["Tyreek Hill", "Derrick Henry", "Odell Beckham Jr.", "Saquon Barkley"],
+      "correctAnswer": "Derrick Henry",
+      "hint": "This Titans running back tied the NFL record for the longest play from scrimmage.",
+      "image": "football-touchdown",
+      "category": "Long Plays"
+    },
+    {
+      "question": "Which coach was fired after going 14-2 in the 2006 season?",
+      "options": ["Andy Reid", "Bill Cowher", "Tony Dungy", "Marty Schottenheimer"],
+      "correctAnswer": "Marty Schottenheimer",
+      "hint": "This Chargers coach was fired after a playoff loss despite the team's excellent record.",
+      "image": "football-coach",
+      "category": "Coaching Changes"
+    },
+    {
+      "question": "Which player had the longest field goal in NFL history at 66 yards in 2021?",
+      "options": ["Justin Tucker", "Harrison Butker", "Matt Prater", "Jake Elliott"],
+      "correctAnswer": "Justin Tucker",
+      "hint": "This Ravens kicker hit this field goal as time expired against the Lions.",
+      "image": "football-kicker",
+      "category": "Kicking Records"
+    }
+  ]
+} 
