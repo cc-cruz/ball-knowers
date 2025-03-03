@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# The Ball Knowers - Sports Trivia Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![The Ball Knowers Logo](public/images/sports-trivia-logo.svg)
 
-## Available Scripts
+## Think you know ball? Settle the score.
 
-In the project directory, you can run:
+The Ball Knowers is an interactive sports trivia app that tests your knowledge across multiple sports including MLB Baseball, NBA Basketball, and NFL Football. Challenge yourself with questions of varying difficulty and compete for high scores on the leaderboard.
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Play the game at: [https://cc-cruz.github.io/ball-knowers/](https://cc-cruz.github.io/ball-knowers/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Multiple Sports Categories**: Test your knowledge in MLB Baseball, NBA Basketball, and NFL Football
+- **Difficulty Levels**: Choose from Easy, Medium, or Hard questions
+- **Personalized Experience**: Enter your name to track your scores on the leaderboard
+- **Timed Challenges**: Answer questions within a time limit for added pressure
+- **Hint System**: Use hints when you're stuck (but it will cost you points!)
+- **High Score Tracking**: Local storage saves your best performances
+- **Responsive Design**: Play on desktop or mobile devices
+- **Keyboard Navigation**: Full keyboard support for accessibility
+- **Sport-Specific Feedback**: Receive custom feedback based on your performance
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- React 18.2.0
+- JavaScript (ES6+)
+- CSS3 with animations
+- Local Storage API
+- GitHub Pages for deployment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation and Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run this project locally:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```
+   git clone https://github.com/cc-cruz/ball-knowers.git
+   ```
 
-### `npm run eject`
+2. Navigate to the project directory:
+   ```
+   cd ball-knowers
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Open your browser and visit:
+   ```
+   http://localhost:3000/ball-knowers
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## How to Play
 
-## Learn More
+1. **Enter Your Name**: Start by entering your name on the welcome screen
+2. **Select a Sport**: Choose from MLB Baseball, NBA Basketball, or NFL Football
+3. **Choose Difficulty**: Select Easy, Medium, or Hard mode
+4. **Answer Questions**: You'll be presented with 10 questions to answer
+5. **Beat the Clock**: Answer before the timer runs out (15 seconds per question)
+6. **Use Hints**: Click the hint button if you need help (costs points)
+7. **Check Your Score**: See your final score and how you rank on the leaderboard
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To deploy to GitHub Pages:
 
-### Code Splitting
+```
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This will build the app and publish it to the gh-pages branch of your repository.
 
-### Analyzing the Bundle Size
+## Question Data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The app includes a variety of questions across different sports:
 
-### Making a Progressive Web App
+- **MLB Baseball**: Historical moments, player stats, World Series facts
+- **NBA Basketball**: Player achievements, team records, basketball history and pop culture
+- **NFL Football**: Super Bowl history, player records, team facts and scandals
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Future Enhancements
 
-### Advanced Configuration
+- Additional sports categories (NHL, Soccer, etc.)
+- Online multiplayer mode
+- Social media sharing
+- Achievement badges
+- Expanded question database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+
+- All sports data and questions are for educational purposes
+- Special thanks to all contributors and testers
