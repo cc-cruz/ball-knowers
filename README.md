@@ -72,13 +72,21 @@ To run this project locally:
 
 ## Deployment
 
-To deploy to GitHub Pages:
+This project uses a special deployment workflow:
 
-```
-npm run deploy
-```
+1. All development work should be done in the `deploy-branch`:
+   ```
+   git checkout deploy-branch
+   ```
 
-This will build the app and publish it to the gh-pages branch of your repository.
+2. To deploy to GitHub Pages, run:
+   ```
+   npm run deploy
+   ```
+
+3. This will build the app and push the built files to the `main` branch, which GitHub Pages serves.
+
+4. The source code is maintained in the `deploy-branch`, while the `main` branch contains only the built files.
 
 ## Question Data
 
