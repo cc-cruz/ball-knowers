@@ -21,6 +21,7 @@ Play the game at: [https://cc-cruz.github.io/ball-knowers/](https://cc-cruz.gith
 - **Responsive Design**: Play on desktop or mobile devices
 - **Keyboard Navigation**: Full keyboard support for accessibility
 - **Sport-Specific Feedback**: Receive custom feedback based on your performance
+- **Merged Question Categories**: All NBA and NFL questions, including pop culture and scandals, are now in their respective main categories
 
 ## Technologies Used
 
