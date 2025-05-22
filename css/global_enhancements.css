@@ -1,0 +1,189 @@
+/* Global Visual Enhancements */
+
+/* 1. Base Styles & Visual Hierarchy */
+body {
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f6f8; 
+    color: #333; 
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 10px; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; 
+    line-height: 1.3;
+    margin-top: 1.5em; 
+    margin-bottom: 0.75em; 
+    color: #1a237e; 
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #0056b3; 
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 2. Layout & Container Consistency */
+.quiz-container { /* Assuming this is a primary wrapper for quiz/game sections */
+    max-width: 900px; 
+    margin: 20px auto; 
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Generic screen containers within .quiz-container or similar contexts */
+.welcome-screen, 
+.start-screen, 
+.game-screen, 
+.result-screen,
+.sport-selection-screen,
+.name-form { /* Added name-form as it's a distinct screen-like section */
+    padding: 20px; 
+    text-align: center; /* Assuming most are centered; can be overridden */
+}
+
+/* Ensure main App container also benefits from some base consistency if not using .quiz-container directly */
+.App { /* Common React app root class */
+    padding: 20px; /* Consistent padding for the overall app view */
+}
+
+
+/* 3. Enhanced Button Design (General) */
+button, 
+.button, 
+.btn { /* Target common button classes/tags */
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1rem; 
+    font-weight: 600; 
+    color: #ffffff;
+    background-color: #007bff; /* Primary blue */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+button:hover:not(:disabled), 
+.button:hover:not(:disabled), 
+.btn:hover:not(:disabled) {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active:not(:disabled), 
+.button:active:not(:disabled), 
+.btn:active:not(:disabled) {
+    transform: translateY(0px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: #004085; /* Even darker for active state */
+}
+
+button:disabled, 
+.button:disabled, 
+.btn:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+    transform: none;
+}
+
+/* 4. Specific Component Styling (Examples) */
+/* These are examples and may need to be adjusted based on existing HTML structure and class names */
+
+.welcome-title { /* Assuming class from previous context */
+    font-size: 3rem; 
+    color: #002D72; /* Specific MLB blue for welcome title */
+    margin-bottom: 20px;
+}
+
+/* .sport-button - often has specific designs, might need to override general button styles */
+.sport-button {
+    /* Example: if sport-button needs a different base color or padding */
+    /* background-color: var(--primary-color, #f0f0f0); */ /* Use CSS var if defined by JS */
+    /* color: #333; */
+    /* padding: 30px 20px; */ /* As seen in existing app CSS */
+}
+/* Keep hover/active consistent or define specific ones if needed */
+.sport-button:hover:not(:disabled) {
+    /* background-color: #e0e0e0; */
+}
+
+
+/* .option-button - for quiz answer choices */
+.option-button { /* Using this class name as specified */
+    background-color: #e9ecef; 
+    color: #333; 
+    width: 100%; 
+    margin-bottom: 10px; 
+    text-align: left; 
+    padding: 15px;
+    /* Overrides general button text color and background */
+}
+
+.option-button:hover:not(:disabled) {
+    background-color: #ced4da;
+    /* Overrides general button hover background */
+}
+
+.option-button.correct {
+    background-color: #28a745; 
+    color: white;
+}
+
+.option-button.incorrect {
+    background-color: #dc3545; 
+    color: white;
+}
+
+
+/* 5. Sports Iconography Placeholder */
+/* Example: .sport-icon-mlb::before { content: '⚾'; margin-right: 8px; } */
+/* Actual implementation would require identifying or adding specific classes in the HTML, */
+/* or JavaScript to dynamically add icons based on content. */
+
+/* Utility Classes (Optional but helpful) */
+.text-center {
+    text-align: center;
+}
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+
+/* Add a wrapper for the MLB 21 Questions page to apply quiz-container styles if needed */
+/* If mlb_21_questions_page.html's .game-container is intended to be the primary content block, */
+/* we can treat it like .quiz-container for consistency. */
+/* The styles in mlb_21_questions_page.html's <style> tag are more specific and will override these. */
+/* However, for global consistency, if it were to not have inline styles: */
+/*
+.mlb-game-page .game-container {
+    max-width: 900px; 
+    margin: 20px auto; 
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+*/
