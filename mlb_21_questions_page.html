@@ -4,49 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MLB 21 Questions</title>
-    <link rel="stylesheet" href="static/css/main.526e61d2.css"> <!-- Adjusted path assuming it's in root -->
-    <style>
-        /* Basic styles for game elements if needed, can be moved to mlb_21_ui.css later */
-        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f2f5; margin: 0; }
-        .game-container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; width: 90%; max-width: 600px; }
-        .revealed-question, .revealed-answer { margin: 10px 0; font-size: 1.2em; }
-        .guesses-left { margin: 10px 0; font-weight: bold; }
-        .message-area { margin: 15px 0; color: #e74c3c; font-weight: bold; min-height: 20px; }
-        input[type='text'] { padding: 8px; margin-right: 5px; border-radius: 4px; border: 1px solid #ccc; }
-        button { padding: 10px 15px; margin: 5px; border-radius: 4px; border: none; cursor: pointer; background-color: #3498db; color: white; }
-        button:hover { background-color: #2980b9; }
-        button:disabled { background-color: #bdc3c7; }
-        .hidden { display: none; }
-        ul#revealed-history { list-style: none; padding: 0; max-height: 200px; overflow-y: auto; border: 1px solid #eee; margin-top: 10px; text-align: left; }
-        ul#revealed-history li { padding: 5px; border-bottom: 1px solid #eee; }
-        ul#revealed-history li:last-child { border-bottom: none; }
-    </style>
+    <link rel="stylesheet" href="static/css/main.526e61d2.css">
+    <link rel="stylesheet" href="css/global_enhancements.css">
 </head>
 <body>
+    <!-- ... (rest of the body as previously defined) ... -->
     <div class="game-container">
         <h1>MLB 21 Questions</h1>
-        
         <div class="guesses-left">Guesses Left: <span id="guesses-left-count">21</span></div>
-        
+        <!-- New Clue Progress Div -->
+        <div id="clue-progress">Clue: <span id="current-clue-number">0</span>/21</div>
         <button id="reveal-next-btn">Reveal Next Answer/Clue</button>
-        
         <div id="revealed-area">
             <h2>Clues:</h2>
-            <ul id="revealed-history">
-                <!-- Revealed questions and answers will be listed here -->
-            </ul>
+            <ul id="revealed-history"></ul>
         </div>
-
         <div class="message-area" id="message-area"></div>
-
         <div>
             <input type="text" id="guess-input" placeholder="Enter player's name">
             <button id="submit-guess-btn">Submit Guess</button>
         </div>
-        
         <button id="play-again-btn" class="hidden">Play Again</button>
     </div>
-
     <script src="js/mlb_21_questions_game.js"></script>
     <script src="js/mlb_21_ui.js"></script>
 </body>

@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const guessInputEl = document.getElementById('guess-input');
     const submitGuessBtn = document.getElementById('submit-guess-btn');
     const playAgainBtn = document.getElementById('play-again-btn');
+    const currentClueNumberEl = document.getElementById('current-clue-number'); // Added
 
     let currentGameState;
 
@@ -43,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             revealedHistoryEl.innerHTML = ''; // Clear previous game clues
             guessInputEl.value = '';
             messageAreaEl.textContent = '';
+            if(currentClueNumberEl) { // Added
+                currentClueNumberEl.textContent = '0';
+            }
             renderUI(currentGameState);
 
         } catch (error) {
@@ -55,6 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!gameState) return;
 
         guessesLeftCountEl.textContent = gameState.guessesLeft;
+        if(currentClueNumberEl) { // Added
+            currentClueNumberEl.textContent = gameState.currentQuestionIndex;
+        }
 
         if (revealedInfo && revealedInfo.questionText && revealedInfo.answer) {
             const listItem = document.createElement('li');
