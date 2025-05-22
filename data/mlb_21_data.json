@@ -1,0 +1,373 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "Mike Trout",
+      "team": "Los Angeles Angels",
+      "position": "Outfielder",
+      "league": "American League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": false,
+      "bats": "Right",
+      "throws": "Right",
+      "era": null,
+      "homeRuns": "301-500",
+      "decadeActive": "2010s",
+      "hallOfFame": false
+    },
+    {
+      "id": 2,
+      "name": "Shohei Ohtani",
+      "team": "Los Angeles Dodgers",
+      "position": "Pitcher/DH",
+      "league": "National League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": false,
+      "bats": "Left",
+      "throws": "Right",
+      "era": "sub-3.00",
+      "homeRuns": "101-300",
+      "decadeActive": "2020s",
+      "hallOfFame": false
+    },
+    {
+      "id": 3,
+      "name": "Clayton Kershaw",
+      "team": "Los Angeles Dodgers",
+      "position": "Pitcher",
+      "league": "National League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": true,
+      "bats": "Left",
+      "throws": "Left",
+      "era": "sub-3.00",
+      "homeRuns": "0-100",
+      "decadeActive": "2010s",
+      "hallOfFame": false
+    },
+    {
+      "id": 4,
+      "name": "Aaron Judge",
+      "team": "New York Yankees",
+      "position": "Outfielder",
+      "league": "American League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": false,
+      "bats": "Right",
+      "throws": "Right",
+      "era": null,
+      "homeRuns": "101-300",
+      "decadeActive": "2020s",
+      "hallOfFame": false
+    },
+    {
+      "id": 5,
+      "name": "Jose Altuve",
+      "team": "Houston Astros",
+      "position": "Infielder",
+      "league": "American League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": true,
+      "bats": "Right",
+      "throws": "Right",
+      "era": null,
+      "homeRuns": "101-300",
+      "decadeActive": "2010s",
+      "hallOfFame": false
+    },
+    {
+      "id": 6,
+      "name": "Babe Ruth",
+      "team": "New York Yankees",
+      "position": "Outfielder/Pitcher",
+      "league": "American League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": true,
+      "bats": "Left",
+      "throws": "Left",
+      "era": "sub-3.00",
+      "homeRuns": "501+",
+      "decadeActive": "1920s",
+      "hallOfFame": true
+    },
+    {
+      "id": 7,
+      "name": "Jackie Robinson",
+      "team": "Brooklyn Dodgers",
+      "position": "Infielder",
+      "league": "National League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": true,
+      "bats": "Right",
+      "throws": "Right",
+      "era": null,
+      "homeRuns": "101-300",
+      "decadeActive": "1950s",
+      "hallOfFame": true
+    },
+    {
+      "id": 8,
+      "name": "Sandy Koufax",
+      "team": "Los Angeles Dodgers",
+      "position": "Pitcher",
+      "league": "National League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": true,
+      "bats": "Right",
+      "throws": "Left",
+      "era": "sub-3.00",
+      "homeRuns": "0-100",
+      "decadeActive": "1960s",
+      "hallOfFame": true
+    },
+    {
+      "id": 9,
+      "name": "Ken Griffey Jr.",
+      "team": "Seattle Mariners",
+      "position": "Outfielder",
+      "league": "American League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": false,
+      "bats": "Left",
+      "throws": "Left",
+      "era": null,
+      "homeRuns": "501+",
+      "decadeActive": "1990s",
+      "hallOfFame": true
+    },
+    {
+      "id": 10,
+      "name": "Mariano Rivera",
+      "team": "New York Yankees",
+      "position": "Pitcher",
+      "league": "American League",
+      "isAllStar": true,
+      "wonMVP": false,
+      "wonWorldSeries": true,
+      "bats": "Right",
+      "throws": "Right",
+      "era": "sub-3.00",
+      "homeRuns": "0-100",
+      "decadeActive": "2000s",
+      "hallOfFame": true
+    },
+    {
+      "id": 11,
+      "name": "Ichiro Suzuki",
+      "team": "Seattle Mariners",
+      "position": "Outfielder",
+      "league": "American League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": false,
+      "bats": "Left",
+      "throws": "Right",
+      "era": null,
+      "homeRuns": "101-300",
+      "decadeActive": "2000s",
+      "hallOfFame": false
+    },
+    {
+      "id": 12,
+      "name": "Randy Johnson",
+      "team": "Arizona Diamondbacks",
+      "position": "Pitcher",
+      "league": "National League",
+      "isAllStar": true,
+      "wonMVP": true,
+      "wonWorldSeries": true,
+      "bats": "Right",
+      "throws": "Left",
+      "era": "3.00-4.00",
+      "homeRuns": "0-100",
+      "decadeActive": "1990s",
+      "hallOfFame": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Is this player in the American League?",
+      "attribute": "league",
+      "expectedValue": "American League",
+      "positiveCase": true
+    },
+    {
+      "id": "q2",
+      "text": "Is this player in the National League?",
+      "attribute": "league",
+      "expectedValue": "National League",
+      "positiveCase": true
+    },
+    {
+      "id": "q3",
+      "text": "Has this player been an All-Star?",
+      "attribute": "isAllStar",
+      "expectedValue": true,
+      "positiveCase": true
+    },
+    {
+      "id": "q4",
+      "text": "Has this player never been an All-Star?",
+      "attribute": "isAllStar",
+      "expectedValue": false,
+      "positiveCase": true
+    },
+    {
+      "id": "q5",
+      "text": "Has this player won an MVP award?",
+      "attribute": "wonMVP",
+      "expectedValue": true,
+      "positiveCase": true
+    },
+    {
+      "id": "q6",
+      "text": "Has this player never won an MVP award?",
+      "attribute": "wonMVP",
+      "expectedValue": false,
+      "positiveCase": true
+    },
+    {
+      "id": "q7",
+      "text": "Has this player won a World Series?",
+      "attribute": "wonWorldSeries",
+      "expectedValue": true,
+      "positiveCase": true
+    },
+    {
+      "id": "q8",
+      "text": "Has this player never won a World Series?",
+      "attribute": "wonWorldSeries",
+      "expectedValue": false,
+      "positiveCase": true
+    },
+    {
+      "id": "q9",
+      "text": "Does this player bat right-handed?",
+      "attribute": "bats",
+      "expectedValue": "Right",
+      "positiveCase": true
+    },
+    {
+      "id": "q10",
+      "text": "Does this player bat left-handed?",
+      "attribute": "bats",
+      "expectedValue": "Left",
+      "positiveCase": true
+    },
+    {
+      "id": "q11",
+      "text": "Does this player switch hit?",
+      "attribute": "bats",
+      "expectedValue": "Switch",
+      "positiveCase": true
+    },
+    {
+      "id": "q12",
+      "text": "Does this player throw right-handed?",
+      "attribute": "throws",
+      "expectedValue": "Right",
+      "positiveCase": true
+    },
+    {
+      "id": "q13",
+      "text": "Does this player throw left-handed?",
+      "attribute": "throws",
+      "expectedValue": "Left",
+      "positiveCase": true
+    },
+    {
+      "id": "q14",
+      "text": "Does this pitcher have an ERA below 3.00?",
+      "attribute": "era",
+      "expectedValue": "sub-3.00",
+      "positiveCase": true
+    },
+    {
+      "id": "q15",
+      "text": "Does this pitcher have an ERA between 3.00 and 4.00?",
+      "attribute": "era",
+      "expectedValue": "3.00-4.00",
+      "positiveCase": true
+    },
+    {
+      "id": "q16",
+      "text": "Has this player hit more than 500 home runs?",
+      "attribute": "homeRuns",
+      "expectedValue": "501+",
+      "positiveCase": true
+    },
+    {
+      "id": "q17",
+      "text": "Has this player hit 100 or fewer home runs?",
+      "attribute": "homeRuns",
+      "expectedValue": "0-100",
+      "positiveCase": true
+    },
+    {
+      "id": "q18",
+      "text": "Was this player primarily active in the 2010s?",
+      "attribute": "decadeActive",
+      "expectedValue": "2010s",
+      "positiveCase": true
+    },
+    {
+      "id": "q19",
+      "text": "Was this player primarily active in the 1990s?",
+      "attribute": "decadeActive",
+      "expectedValue": "1990s",
+      "positiveCase": true
+    },
+    {
+      "id": "q20",
+      "text": "Is this player in the Hall of Fame?",
+      "attribute": "hallOfFame",
+      "expectedValue": true,
+      "positiveCase": true
+    },
+    {
+      "id": "q21",
+      "text": "Is this player not yet in the Hall of Fame?",
+      "attribute": "hallOfFame",
+      "expectedValue": false,
+      "positiveCase": true
+    },
+    {
+      "id": "q22",
+      "text": "Is this player a pitcher?",
+      "attribute": "position",
+      "expectedValue": "Pitcher",
+      "positiveCase": true
+    },
+    {
+      "id": "q23",
+      "text": "Is this player an outfielder?",
+      "attribute": "position",
+      "expectedValue": "Outfielder",
+      "positiveCase": true
+    },
+    {
+      "id": "q24",
+      "text": "Is this player an infielder?",
+      "attribute": "position",
+      "expectedValue": "Infielder",
+      "positiveCase": true
+    },
+    {
+      "id": "q25",
+      "text": "Did this player play for the New York Yankees?",
+      "attribute": "team",
+      "expectedValue": "New York Yankees",
+      "positiveCase": true
+    }
+  ]
+}
