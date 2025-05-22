@@ -128,31 +128,103 @@ button:disabled,
     /* background-color: #e0e0e0; */
 }
 
-
-/* .option-button - for quiz answer choices */
-.option-button { /* Using this class name as specified */
-    background-color: #e9ecef; 
-    color: #333; 
-    width: 100%; 
-    margin-bottom: 10px; 
-    text-align: left; 
-    padding: 15px;
-    /* Overrides general button text color and background */
+/* Enhanced Styles for .option-button (Quiz Answer Choices) */
+.option-button {
+    display: flex; /* For alignment of number and text */
+    align-items: center; /* Vertically align number and text */
+    width: 100%;
+    margin-bottom: 12px; /* Increased space between options */
+    padding: 15px 20px; /* Generous padding */
+    background-color: #f8f9fa; /* Lighter background for the card itself */
+    color: #343a40; /* Darker text for contrast */
+    border: 1px solid #dee2e6; /* Clearer border */
+    border-radius: 8px; /* Consistent with other new button styles */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+    text-align: left;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer; /* Ensure cursor indicates interactivity */
 }
 
 .option-button:hover:not(:disabled) {
-    background-color: #ced4da;
-    /* Overrides general button hover background */
+    background-color: #e9ecef; /* Slightly darker on hover */
+    border-color: #adb5bd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* More pronounced shadow on hover */
+}
+
+.option-button:focus:not(:disabled) { /* For keyboard navigation */
+    outline: 2px solid #007bff; /* Clear focus ring */
+    outline-offset: 2px;
+    border-color: #007bff; /* Match focus ring color */
+}
+
+.option-button:active:not(:disabled) {
+   transform: translateY(0px);
+   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+   background-color: #dae0e5; /* Darker active state */
+}
+
+.option-button.correct,
+.option-button.incorrect {
+    color: white;
+    border-color: transparent; /* Hide border if background is strong */
+    /* pointer-events: none; */ /* Optional: if they shouldn't be interactive after answering */
 }
 
 .option-button.correct {
-    background-color: #28a745; 
-    color: white;
+    background-color: #28a745; /* Green for correct */
 }
 
 .option-button.incorrect {
-    background-color: #dc3545; 
-    color: white;
+    background-color: #dc3545; /* Red for incorrect */
+}
+
+/* Ensure hover/active states don't override selected state */
+.option-button.correct:hover:not(:disabled), 
+.option-button.incorrect:hover:not(:disabled) {
+   background-color: #28a745; /* Maintain correct color */
+   transform: none; /* No hover transform */
+   box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Maintain base shadow */
+}
+.option-button.incorrect:hover:not(:disabled) {
+    background-color: #dc3545; /* Maintain incorrect color */
+}
+
+
+/* Styling for Number Hints within .option-button */
+.option-button .option-number {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    min-width: 28px; 
+    height: 28px; 
+    margin-right: 15px; 
+    padding: 0 5px; 
+    font-weight: 600;
+    color: #007bff; 
+    background-color: #ffffff; 
+    border: 1px solid #007bff; 
+    border-radius: 6px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: color 0.2s ease, border-color 0.2s ease; /* Smooth transition */
+}
+
+.option-button:hover:not(:disabled) .option-number {
+    border-color: #0056b3; 
+    color: #0056b3;
+}
+
+.option-button.correct .option-number,
+.option-button.incorrect .option-number {
+   background-color: white;
+   color: #333; 
+   border-color: #ccc; 
+}
+
+/* Styling for Text within .option-button */
+.option-button .option-text {
+    flex-grow: 1; 
+    line-height: 1.4; 
 }
 
 
@@ -187,3 +259,181 @@ button:disabled,
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 */
+
+/* Style for Progress Indicator in Standard Quizzes */
+.game-header .progress {
+    font-size: 1.1rem; /* Ensure it's readable */
+    font-weight: 500;
+    color: #ffffff; /* Assuming dark header background */
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle background to make it pop slightly */
+}
+
+/* Styles for Clue Progress Indicator on MLB 21 Questions Page */
+#clue-progress {
+    font-size: 1.2rem; /* Slightly larger for emphasis */
+    font-weight: 600;
+    color: #333; /* Darker color */
+    margin-bottom: 20px;
+    padding: 8px;
+    background-color: #e9ecef; /* Light background */
+    border-radius: 6px;
+    display: inline-block; /* To fit content */
+}
+#clue-progress span {
+    font-weight: 700;
+}
+
+/* Enhanced Score Visualization */
+
+/* 1. In-Game Score Display (Standard Quizzes) */
+.game-header .score {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff; /* Assuming dark header */
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.15); /* Optional: subtle highlight */
+    border-radius: 4px;
+    /* animation: pulse-score-light 2s infinite ease-in-out; */ /* Optional subtle animation */
+}
+
+/* Optional keyframes for a very subtle pulse, if used */
+/* @keyframes pulse-score-light {
+    0% { background-color: rgba(255, 255, 255, 0.15); }
+    50% { background-color: rgba(255, 255, 255, 0.25); }
+    100% { background-color: rgba(255, 255, 255, 0.15); }
+} */
+
+/* 2. Final Score Display (Result Screen) */
+.result-screen .final-score { /* Class '.final-score' exists in main.526e61d2.css */
+    font-size: 2.8rem; /* Increased size for more impact */
+    font-weight: 700;
+    color: #007bff; /* Primary vibrant blue */
+    margin-top: 20px; /* Adjusted margin */
+    margin-bottom: 30px; /* Adjusted margin */
+    /* text-shadow: 1px 1px 3px rgba(0,0,0,0.1); */ /* Optional */
+}
+
+/* 3. Enhance MLB 21 Questions Win Message */
+/* Styles for mlb_21_questions_page.html #message-area.success */
+/* This selector might need to be more specific if #message-area is used elsewhere without the .success class */
+#message-area.success { /* This class is added by js/mlb_21_ui.js */
+    color: #28a745; /* Existing success green */
+    font-size: 1.5rem; /* Make win message prominent */
+    font-weight: 700;
+    padding: 10px 15px; /* Add some padding */
+    background-color: #e8f5e9; /* Light green background */
+    border-radius: 6px; /* Rounded corners */
+    border: 1px solid #a5d6a7; /* Subtle border */
+    display: inline-block; /* Fit content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Enhanced Timer Visualization */
+.game-header .timer {
+    font-size: 1.2rem;
+    font-weight: 700; /* Make it bold */
+    color: #ffc107;  /* A warning yellow, stands out on dark headers */
+    padding: 5px 10px;
+    border-radius: 4px;
+    /* background-color: rgba(0, 0, 0, 0.1); */ /* Optional: subtle background, commented out as per example */
+}
+
+.game-header .timer.timer-low {
+    color: #f0ad4e; /* Brighter orange for low time */
+    /* Consider removing background if color alone is enough */
+}
+
+.game-header .timer.timer-critical {
+    color: #dc3545; /* Red for critical time */
+    animation: pulse-timer 1s infinite ease-in-out;
+}
+
+@keyframes pulse-timer {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Enhanced Streak Counter Visualization */
+.game-header .streak {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #28a745; /* Green for positive streak */
+    padding: 5px 10px;
+    border-radius: 4px;
+    /* background-color: rgba(0, 0, 0, 0.1); */ /* Optional */
+    transition: transform 0.2s ease-out, color 0.2s ease-out; /* For smooth animation reset */
+}
+
+.game-header .streak.streak-increased {
+    /* This class would be added by JS for a short duration */
+    animation: celebrate-streak 0.8s ease-out forwards;
+}
+
+@keyframes celebrate-streak {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1.3);
+        color: #ffeb3b; /* Bright yellow flash */
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+        color: #28a745; /* Return to original streak color */
+    }
+}
+
+/* Enhanced Hint Button Visualization */
+.game-controls .hint-button { /* Assuming it's within .game-controls */
+    background-color: #17a2b8; /* A distinct 'info' blue/teal color */
+    color: white;
+    padding: 10px 20px; /* Adjust padding if needed */
+    border-radius: 8px; /* Consistent with other buttons */
+    font-weight: 500;
+    font-size: 0.95rem; /* Slightly smaller or same as other buttons */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    /* display: flex; */ /* Uncomment if using icon and text for alignment */
+    /* align-items: center; */
+}
+
+/* Optional: Add a lightbulb icon using a pseudo-element */
+.game-controls .hint-button::before {
+    content: "💡"; /* Lightbulb emoji */
+    margin-right: 8px;
+    font-size: 1.1em; /* Adjust size if needed */
+    /* display: inline-block; */ /* Needed if main button is not flex */
+}
+
+.game-controls .hint-button:hover:not(:disabled) {
+    background-color: #138496; /* Darker shade of the info blue/teal */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.game-controls .hint-button:active:not(:disabled) {
+    transform: translateY(0px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    background-color: #117a8b; /* Even darker for active state */
+}
+
+.game-controls .hint-button:disabled {
+    background-color: #bdc3c7; /* Standard disabled style */
+    color: #7f8c8d;
+    opacity: 0.7;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+.game-controls .hint-button:disabled::before { /* Optional: Dim icon when disabled */
+   opacity: 0.5;
+}
