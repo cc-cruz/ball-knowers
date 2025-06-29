@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check if MLB21QuestionsGame is loaded
     if (typeof MLB21QuestionsGame === 'undefined') {
         console.error('MLB21QuestionsGame script not loaded!');
-        // Display error to user in the UI
         const messageArea = document.getElementById('message-area');
         if (messageArea) {
             messageArea.textContent = 'Critical error: Game logic is missing. Please refresh or contact support.';
+            messageArea.className = 'mlb-message-area error';
         }
         return;
     }
@@ -18,33 +18,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const guessInputEl = document.getElementById('guess-input');
     const submitGuessBtn = document.getElementById('submit-guess-btn');
     const playAgainBtn = document.getElementById('play-again-btn');
-    const currentClueNumberEl = document.getElementById('current-clue-number'); // Added
+    const currentClueNumberEl = document.getElementById('current-clue-number');
 
     let currentGameState;
+    let clueCounter = 0;
 
     async function startGame() {
         messageAreaEl.textContent = 'Loading game data...';
+        messageAreaEl.className = 'mlb-message-area info';
         revealNextBtn.disabled = true;
         submitGuessBtn.disabled = true;
         playAgainBtn.classList.add('hidden');
+        clueCounter = 0;
 
         try {
             const gameData = await MLB21QuestionsGame.loadGameData('data/mlb_21_data.json');
             if (!gameData || !gameData.players || !gameData.questions) {
                 messageAreaEl.textContent = 'Failed to load game data. Please try refreshing.';
+                messageAreaEl.className = 'mlb-message-area error';
                 return;
             }
 
             currentGameState = MLB21QuestionsGame.initializeGame(gameData.players, gameData.questions);
             if (!currentGameState) {
                 messageAreaEl.textContent = 'Failed to initialize game. Please try refreshing.';
+                messageAreaEl.className = 'mlb-message-area error';
                 return;
             }
 
-            revealedHistoryEl.innerHTML = ''; // Clear previous game clues
+            revealedHistoryEl.innerHTML = '';
             guessInputEl.value = '';
-            messageAreaEl.textContent = '';
-            if(currentClueNumberEl) { // Added
+            messageAreaEl.textContent = 'Game loaded! Click "Reveal Next Clue" to start discovering clues about the mystery player.';
+            messageAreaEl.className = 'mlb-message-area info';
+            
+            if(currentClueNumberEl) {
                 currentClueNumberEl.textContent = '0';
             }
             renderUI(currentGameState);
@@ -52,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error("Error starting game:", error);
             messageAreaEl.textContent = 'Error starting game. Check console for details.';
+            messageAreaEl.className = 'mlb-message-area error';
         }
     }
 
@@ -59,18 +67,42 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!gameState) return;
 
         guessesLeftCountEl.textContent = gameState.guessesLeft;
-        if(currentClueNumberEl) { // Added
+        if(currentClueNumberEl) {
             currentClueNumberEl.textContent = gameState.currentQuestionIndex;
         }
 
         if (revealedInfo && revealedInfo.questionText && revealedInfo.answer) {
+            clueCounter++;
             const listItem = document.createElement('li');
-            listItem.textContent = `Q: ${revealedInfo.questionText} A: ${revealedInfo.answer}`;
+            
+            // Create clue structure
+            const clueIcon = document.createElement('div');
+            clueIcon.className = 'mlb-clue-icon';
+            clueIcon.textContent = clueCounter;
+            
+            const clueText = document.createElement('div');
+            clueText.className = 'mlb-clue-text';
+            clueText.textContent = revealedInfo.questionText;
+            
+            const answerSpan = document.createElement('span');
+            answerSpan.className = `mlb-answer ${revealedInfo.answer.toLowerCase()}`;
+            answerSpan.textContent = revealedInfo.answer;
+            
+            listItem.appendChild(clueIcon);
+            listItem.appendChild(clueText);
+            listItem.appendChild(answerSpan);
+            
             revealedHistoryEl.appendChild(listItem);
-            revealedHistoryEl.scrollTop = revealedHistoryEl.scrollHeight; // Scroll to bottom
+            revealedHistoryEl.scrollTop = revealedHistoryEl.scrollHeight;
+            
+            // Clear message area after revealing a clue
+            if (!gameState.gameOver) {
+                messageAreaEl.textContent = '';
+                messageAreaEl.className = 'mlb-message-area';
+            }
         }
         
-        guessInputEl.value = ''; // Clear input after reveal or guess attempt
+        guessInputEl.value = '';
 
         if (gameState.gameOver) {
             revealNextBtn.disabled = true;
@@ -78,16 +110,42 @@ document.addEventListener('DOMContentLoaded', () => {
             playAgainBtn.classList.remove('hidden');
 
             if (gameState.gameWon) {
-                messageAreaEl.textContent = `You win! The player was ${gameState.secretPlayer.name}.`;
-                messageAreaEl.style.color = 'green';
+                messageAreaEl.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 2rem;">🎉</span>
+                        <div>
+                            <div style="font-size: 1.2rem; margin-bottom: 4px;">Congratulations!</div>
+                            <div>You correctly guessed <strong>${gameState.secretPlayer.name}</strong>!</div>
+                        </div>
+                    </div>
+                `;
+                messageAreaEl.className = 'mlb-message-area success';
             } else {
-                messageAreaEl.textContent = `Game Over! The player was ${gameState.secretPlayer.name}.`;
-                messageAreaEl.style.color = '#e74c3c'; // Default error color
+                messageAreaEl.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <span style="font-size: 2rem;">😔</span>
+                        <div>
+                            <div style="font-size: 1.2rem; margin-bottom: 4px;">Game Over!</div>
+                            <div>The mystery player was <strong>${gameState.secretPlayer.name}</strong>.</div>
+                        </div>
+                    </div>
+                `;
+                messageAreaEl.className = 'mlb-message-area error';
             }
         } else {
             revealNextBtn.disabled = gameState.guessesLeft <= 0;
             submitGuessBtn.disabled = false;
             playAgainBtn.classList.add('hidden');
+        }
+
+        // Update button text based on remaining clues
+        if (!gameState.gameOver) {
+            const remainingClues = gameState.questions.length - gameState.currentQuestionIndex;
+            if (remainingClues > 0) {
+                revealNextBtn.innerHTML = `🎯 Reveal Next Clue (${remainingClues} remaining)`;
+            } else {
+                revealNextBtn.innerHTML = '🎯 No more clues available';
+            }
         }
     }
 
@@ -100,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (revealedQuestionText && revealedAnswer) {
             renderUI(currentGameState, { questionText: revealedQuestionText, answer: revealedAnswer });
         } else {
-            renderUI(currentGameState); // Render to update button states if no more questions/guesses
+            renderUI(currentGameState);
         }
     });
 
@@ -109,8 +167,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const guessedName = guessInputEl.value.trim();
         if (!guessedName) {
-            messageAreaEl.textContent = 'Please enter a player\'s name.';
-            messageAreaEl.style.color = '#e74c3c';
+            messageAreaEl.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.5rem;">⚠️</span>
+                    <div>Please enter a player's name before submitting your guess.</div>
+                </div>
+            `;
+            messageAreaEl.className = 'mlb-message-area error';
+            guessInputEl.focus();
             return;
         }
 
@@ -118,22 +182,36 @@ document.addEventListener('DOMContentLoaded', () => {
         currentGameState = updatedGameState;
 
         if (currentGameState.gameOver) {
-            if (correctGuess) { // Game won
-                messageAreaEl.textContent = `Correct! You win! The player was ${currentGameState.secretPlayer.name}.`;
-                messageAreaEl.style.color = 'green';
-            } else { // Game lost (either by incorrect guess with 0 guessesLeft or final incorrect guess)
-                 messageAreaEl.textContent = `Incorrect guess. Game Over! The player was ${currentGameState.secretPlayer.name}.`;
-                 messageAreaEl.style.color = '#e74c3c';
+            if (correctGuess) {
+                // Success message will be handled in renderUI
+            } else {
+                // Error message will be handled in renderUI
             }
-        } else { // Game not over, incorrect guess
-            messageAreaEl.textContent = 'Incorrect guess. Try again or reveal more clues.';
-            messageAreaEl.style.color = '#e74c3c';
+        } else {
+            messageAreaEl.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.5rem;">❌</span>
+                    <div>
+                        <div style="font-size: 1.1rem; margin-bottom: 4px;">Incorrect guess!</div>
+                        <div>That's not the right player. Try revealing more clues or make another guess.</div>
+                    </div>
+                </div>
+            `;
+            messageAreaEl.className = 'mlb-message-area error';
         }
         renderUI(currentGameState);
     });
 
+    // Enhanced enter key support for guess input
+    guessInputEl.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && !submitGuessBtn.disabled) {
+            submitGuessBtn.click();
+        }
+    });
+
     playAgainBtn.addEventListener('click', () => {
-        messageAreaEl.style.color = '#e74c3c'; // Reset to default error/message color
+        messageAreaEl.className = 'mlb-message-area';
+        clueCounter = 0;
         startGame();
     });
 

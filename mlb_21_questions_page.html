@@ -3,29 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLB 21 Questions</title>
+    <title>MLB 21 Questions | The Ball Knowers</title>
     <link rel="stylesheet" href="static/css/main.526e61d2.css">
-    <link rel="stylesheet" href="css/global_enhancements.css">
+    <link rel="stylesheet" href="css/modern-ui.css">
+    <style>
+        /* MLB 21 Questions Specific Styles */
+        .mlb-game-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--space-6);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .mlb-game-card {
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-2xl);
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .mlb-game-header {
+            background: linear-gradient(135deg, #002D72 0%, #1e40af 100%);
+            color: var(--white);
+            padding: var(--space-8);
+            text-align: center;
+            position: relative;
+        }
+
+        .mlb-game-header::before {
+            content: '⚾';
+            position: absolute;
+            top: 50%;
+            left: var(--space-6);
+            transform: translateY(-50%);
+            font-size: var(--text-3xl);
+            opacity: 0.3;
+        }
+
+        .mlb-game-header::after {
+            content: '⚾';
+            position: absolute;
+            top: 50%;
+            right: var(--space-6);
+            transform: translateY(-50%);
+            font-size: var(--text-3xl);
+            opacity: 0.3;
+        }
+
+        .mlb-game-title {
+            font-family: var(--font-family-display);
+            font-size: var(--text-4xl);
+            font-weight: 900;
+            margin-bottom: var(--space-4);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .mlb-game-stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-8);
+            flex-wrap: wrap;
+        }
+
+        .mlb-stat-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: var(--space-3) var(--space-6);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: var(--text-lg);
+            backdrop-filter: blur(10px);
+        }
+
+        .mlb-game-content {
+            padding: var(--space-10) var(--space-8);
+        }
+
+        .mlb-reveal-button {
+            width: 100%;
+            padding: var(--space-5) var(--space-8);
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--white);
+            background: linear-gradient(135deg, #002D72 0%, #1e40af 100%);
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            margin-bottom: var(--space-8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mlb-reveal-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .mlb-reveal-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mlb-reveal-button:hover::before {
+            left: 100%;
+        }
+
+        .mlb-reveal-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .mlb-clues-section {
+            margin: var(--space-8) 0;
+        }
+
+        .mlb-clues-title {
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: var(--space-6);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .mlb-clues-title::before {
+            content: '🔍';
+            font-size: var(--text-xl);
+        }
+
+        .mlb-clues-list {
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            max-height: 400px;
+            overflow-y: auto;
+            border: 2px solid var(--gray-200);
+        }
+
+        .mlb-clues-list:empty::before {
+            content: 'No clues revealed yet. Click the button above to start!';
+            color: var(--gray-500);
+            font-style: italic;
+            display: block;
+            text-align: center;
+            padding: var(--space-8);
+        }
+
+        .mlb-clues-list li {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: var(--space-4) var(--space-5);
+            margin-bottom: var(--space-3);
+            border-left: 4px solid #002D72;
+            box-shadow: var(--shadow-sm);
+            animation: fadeInUp 0.5s ease-out;
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .mlb-clues-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .mlb-clue-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: var(--radius-full);
+            background: #002D72;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-sm);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .mlb-clue-text {
+            flex: 1;
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+
+        .mlb-answer {
+            font-weight: 700;
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-md);
+            font-size: var(--text-sm);
+        }
+
+        .mlb-answer.yes {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent-green);
+        }
+
+        .mlb-answer.no {
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--accent-red);
+        }
+
+        .mlb-guess-section {
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            padding: var(--space-8);
+            margin: var(--space-8) 0;
+            border: 2px solid var(--gray-200);
+        }
+
+        .mlb-guess-title {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: var(--space-6);
+            text-align: center;
+        }
+
+        .mlb-guess-form {
+            display: flex;
+            gap: var(--space-4);
+            align-items: stretch;
+        }
+
+        .mlb-guess-input {
+            flex: 1;
+            padding: var(--space-4) var(--space-6);
+            font-size: var(--text-lg);
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-normal);
+            background: var(--white);
+        }
+
+        .mlb-guess-input:focus {
+            outline: none;
+            border-color: #002D72;
+            box-shadow: 0 0 0 4px rgba(0, 45, 114, 0.1);
+        }
+
+        .mlb-guess-button {
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--text-lg);
+            font-weight: 600;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--accent-green) 0%, #059669 100%);
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            white-space: nowrap;
+        }
+
+        .mlb-guess-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .mlb-guess-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .mlb-message-area {
+            margin: var(--space-6) 0;
+            padding: var(--space-4) var(--space-6);
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            text-align: center;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-normal);
+        }
+
+        .mlb-message-area.success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            color: var(--accent-green);
+        }
+
+        .mlb-message-area.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+            color: var(--accent-red);
+        }
+
+        .mlb-message-area.info {
+            background: rgba(30, 64, 175, 0.1);
+            border: 2px solid rgba(30, 64, 175, 0.3);
+            color: var(--primary-blue);
+        }
+
+        .mlb-play-again {
+            width: 100%;
+            padding: var(--space-5) var(--space-8);
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--white);
+            background: var(--gradient-secondary);
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            margin-top: var(--space-6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mlb-play-again::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .mlb-play-again:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mlb-play-again:hover::before {
+            left: 100%;
+        }
+
+        /* Responsive Design for MLB Game */
+        @media (max-width: 768px) {
+            .mlb-game-container {
+                padding: var(--space-4);
+            }
+
+            .mlb-game-header {
+                padding: var(--space-6);
+            }
+
+            .mlb-game-title {
+                font-size: var(--text-3xl);
+            }
+
+            .mlb-game-stats {
+                gap: var(--space-4);
+            }
+
+            .mlb-stat-item {
+                font-size: var(--text-base);
+                padding: var(--space-2) var(--space-4);
+            }
+
+            .mlb-game-content {
+                padding: var(--space-6);
+            }
+
+            .mlb-guess-form {
+                flex-direction: column;
+            }
+
+            .mlb-guess-button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- ... (rest of the body as previously defined) ... -->
-    <div class="game-container">
-        <h1>MLB 21 Questions</h1>
-        <div class="guesses-left">Guesses Left: <span id="guesses-left-count">21</span></div>
-        <!-- New Clue Progress Div -->
-        <div id="clue-progress">Clue: <span id="current-clue-number">0</span>/21</div>
-        <button id="reveal-next-btn">Reveal Next Answer/Clue</button>
-        <div id="revealed-area">
-            <h2>Clues:</h2>
-            <ul id="revealed-history"></ul>
+    <div class="mlb-game-container">
+        <div class="mlb-game-card">
+            <div class="mlb-game-header">
+                <h1 class="mlb-game-title">MLB 21 Questions</h1>
+                <div class="mlb-game-stats">
+                    <div class="mlb-stat-item">
+                        Guesses Left: <span id="guesses-left-count">21</span>
+                    </div>
+                    <div class="mlb-stat-item">
+                        Clue: <span id="current-clue-number">0</span>/21
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mlb-game-content">
+                <button id="reveal-next-btn" class="mlb-reveal-button">
+                    🎯 Reveal Next Clue
+                </button>
+                
+                <div class="mlb-clues-section">
+                    <h2 class="mlb-clues-title">Revealed Clues</h2>
+                    <ul id="revealed-history" class="mlb-clues-list"></ul>
+                </div>
+                
+                <div id="message-area" class="mlb-message-area"></div>
+                
+                <div class="mlb-guess-section">
+                    <h3 class="mlb-guess-title">🤔 Think you know who it is?</h3>
+                    <div class="mlb-guess-form">
+                        <input type="text" id="guess-input" class="mlb-guess-input" placeholder="Enter player's name (e.g., Mike Trout)">
+                        <button id="submit-guess-btn" class="mlb-guess-button">Submit Guess</button>
+                    </div>
+                </div>
+                
+                <button id="play-again-btn" class="mlb-play-again hidden">
+                    🔄 Play Again
+                </button>
+            </div>
         </div>
-        <div class="message-area" id="message-area"></div>
-        <div>
-            <input type="text" id="guess-input" placeholder="Enter player's name">
-            <button id="submit-guess-btn">Submit Guess</button>
-        </div>
-        <button id="play-again-btn" class="hidden">Play Again</button>
     </div>
+    
     <script src="js/mlb_21_questions_game.js"></script>
     <script src="js/mlb_21_ui.js"></script>
 </body>

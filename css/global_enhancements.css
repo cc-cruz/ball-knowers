@@ -1,439 +1,72 @@
-/* Global Visual Enhancements */
+/* Legacy Global Enhancements - Kept for compatibility */
+/* This file is now supplemented by modern-ui.css for enhanced styling */
 
-/* 1. Base Styles & Visual Hierarchy */
+/* Base compatibility styles */
 body {
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     background-color: #f4f6f8; 
     color: #333; 
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
-    padding: 10px; 
+    padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700; 
-    line-height: 1.3;
-    margin-top: 1.5em; 
-    margin-bottom: 0.75em; 
-    color: #1a237e; 
-}
-
-p {
-    margin-bottom: 1em;
-}
-
-a {
-    color: #0056b3; 
-    text-decoration: none; 
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* 2. Layout & Container Consistency */
-.quiz-container { /* Assuming this is a primary wrapper for quiz/game sections */
-    max-width: 900px; 
-    margin: 20px auto; 
-    padding: 30px 40px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Generic screen containers within .quiz-container or similar contexts */
-.welcome-screen, 
-.start-screen, 
-.game-screen, 
-.result-screen,
+/* Ensure modern styles take precedence */
+.quiz-container,
+.welcome-screen,
 .sport-selection-screen,
-.name-form { /* Added name-form as it's a distinct screen-like section */
-    padding: 20px; 
-    text-align: center; /* Assuming most are centered; can be overridden */
+.start-screen,
+.game-screen,
+.result-screen {
+    /* Modern styles will override these */
 }
 
-/* Ensure main App container also benefits from some base consistency if not using .quiz-container directly */
-.App { /* Common React app root class */
-    padding: 20px; /* Consistent padding for the overall app view */
-}
-
-
-/* 3. Enhanced Button Design (General) */
-button, 
-.button, 
-.btn { /* Target common button classes/tags */
-    display: inline-block;
-    font-family: inherit;
-    font-size: 1rem; 
-    font-weight: 600; 
-    color: #ffffff;
-    background-color: #007bff; /* Primary blue */
-    border: none;
-    border-radius: 8px;
-    padding: 12px 24px;
-    margin: 5px;
+/* Keep some legacy button styles for fallback */
+button:not([class*="mlb-"]):not([class*="modern-"]) {
     cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.25s ease-out;
 }
 
-button:hover:not(:disabled), 
-.button:hover:not(:disabled), 
-.btn:hover:not(:disabled) {
-    background-color: #0056b3; /* Darker shade on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+/* Legacy option button compatibility */
+.option-button:not(.modern-option) {
+    transition: all 0.25s ease-out;
 }
 
-button:active:not(:disabled), 
-.button:active:not(:disabled), 
-.btn:active:not(:disabled) {
-    transform: translateY(0px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    background-color: #004085; /* Even darker for active state */
-}
-
-button:disabled, 
-.button:disabled, 
-.btn:disabled {
-    background-color: #bdc3c7;
+/* Maintain keyboard navigation styles */
+.keyboard-help {
     color: #7f8c8d;
-    cursor: not-allowed;
-    opacity: 0.7;
-    box-shadow: none;
-    transform: none;
+    font-size: 0.9rem;
+    margin-top: 20px;
 }
 
-/* 4. Specific Component Styling (Examples) */
-/* These are examples and may need to be adjusted based on existing HTML structure and class names */
-
-.welcome-title { /* Assuming class from previous context */
-    font-size: 3rem; 
-    color: #002D72; /* Specific MLB blue for welcome title */
-    margin-bottom: 20px;
+.keyboard-help kbd {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    color: #333;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin: 0 2px;
+    padding: 2px 6px;
 }
 
-/* .sport-button - often has specific designs, might need to override general button styles */
-.sport-button {
-    /* Example: if sport-button needs a different base color or padding */
-    /* background-color: var(--primary-color, #f0f0f0); */ /* Use CSS var if defined by JS */
-    /* color: #333; */
-    /* padding: 30px 20px; */ /* As seen in existing app CSS */
-}
-/* Keep hover/active consistent or define specific ones if needed */
-.sport-button:hover:not(:disabled) {
-    /* background-color: #e0e0e0; */
+/* Utility classes */
+.hidden {
+    display: none !important;
 }
 
-/* Enhanced Styles for .option-button (Quiz Answer Choices) */
-.option-button {
-    display: flex; /* For alignment of number and text */
-    align-items: center; /* Vertically align number and text */
-    width: 100%;
-    margin-bottom: 12px; /* Increased space between options */
-    padding: 15px 20px; /* Generous padding */
-    background-color: #f8f9fa; /* Lighter background for the card itself */
-    color: #343a40; /* Darker text for contrast */
-    border: 1px solid #dee2e6; /* Clearer border */
-    border-radius: 8px; /* Consistent with other new button styles */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Subtle shadow for depth */
-    text-align: left;
-    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
-    cursor: pointer; /* Ensure cursor indicates interactivity */
-}
-
-.option-button:hover:not(:disabled) {
-    background-color: #e9ecef; /* Slightly darker on hover */
-    border-color: #adb5bd;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* More pronounced shadow on hover */
-}
-
-.option-button:focus:not(:disabled) { /* For keyboard navigation */
-    outline: 2px solid #007bff; /* Clear focus ring */
-    outline-offset: 2px;
-    border-color: #007bff; /* Match focus ring color */
-}
-
-.option-button:active:not(:disabled) {
-   transform: translateY(0px);
-   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-   background-color: #dae0e5; /* Darker active state */
-}
-
-.option-button.correct,
-.option-button.incorrect {
-    color: white;
-    border-color: transparent; /* Hide border if background is strong */
-    /* pointer-events: none; */ /* Optional: if they shouldn't be interactive after answering */
-}
-
-.option-button.correct {
-    background-color: #28a745; /* Green for correct */
-}
-
-.option-button.incorrect {
-    background-color: #dc3545; /* Red for incorrect */
-}
-
-/* Ensure hover/active states don't override selected state */
-.option-button.correct:hover:not(:disabled), 
-.option-button.incorrect:hover:not(:disabled) {
-   background-color: #28a745; /* Maintain correct color */
-   transform: none; /* No hover transform */
-   box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Maintain base shadow */
-}
-.option-button.incorrect:hover:not(:disabled) {
-    background-color: #dc3545; /* Maintain incorrect color */
-}
-
-
-/* Styling for Number Hints within .option-button */
-.option-button .option-number {
-    display: inline-flex; 
-    align-items: center;
-    justify-content: center;
-    min-width: 28px; 
-    height: 28px; 
-    margin-right: 15px; 
-    padding: 0 5px; 
-    font-weight: 600;
-    color: #007bff; 
-    background-color: #ffffff; 
-    border: 1px solid #007bff; 
-    border-radius: 6px; 
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    transition: color 0.2s ease, border-color 0.2s ease; /* Smooth transition */
-}
-
-.option-button:hover:not(:disabled) .option-number {
-    border-color: #0056b3; 
-    color: #0056b3;
-}
-
-.option-button.correct .option-number,
-.option-button.incorrect .option-number {
-   background-color: white;
-   color: #333; 
-   border-color: #ccc; 
-}
-
-/* Styling for Text within .option-button */
-.option-button .option-text {
-    flex-grow: 1; 
-    line-height: 1.4; 
-}
-
-
-/* 5. Sports Iconography Placeholder */
-/* Example: .sport-icon-mlb::before { content: '⚾'; margin-right: 8px; } */
-/* Actual implementation would require identifying or adding specific classes in the HTML, */
-/* or JavaScript to dynamically add icons based on content. */
-
-/* Utility Classes (Optional but helpful) */
 .text-center {
     text-align: center;
 }
+
+/* Spacing utilities */
 .mb-1 { margin-bottom: 0.25rem; }
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-3 { margin-bottom: 1rem; }
 .mt-1 { margin-top: 0.25rem; }
 .mt-2 { margin-top: 0.5rem; }
 .mt-3 { margin-top: 1rem; }
-
-/* Add a wrapper for the MLB 21 Questions page to apply quiz-container styles if needed */
-/* If mlb_21_questions_page.html's .game-container is intended to be the primary content block, */
-/* we can treat it like .quiz-container for consistency. */
-/* The styles in mlb_21_questions_page.html's <style> tag are more specific and will override these. */
-/* However, for global consistency, if it were to not have inline styles: */
-/*
-.mlb-game-page .game-container {
-    max-width: 900px; 
-    margin: 20px auto; 
-    padding: 30px 40px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-*/
-
-/* Style for Progress Indicator in Standard Quizzes */
-.game-header .progress {
-    font-size: 1.1rem; /* Ensure it's readable */
-    font-weight: 500;
-    color: #ffffff; /* Assuming dark header background */
-    padding: 5px 10px;
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.1); /* Subtle background to make it pop slightly */
-}
-
-/* Styles for Clue Progress Indicator on MLB 21 Questions Page */
-#clue-progress {
-    font-size: 1.2rem; /* Slightly larger for emphasis */
-    font-weight: 600;
-    color: #333; /* Darker color */
-    margin-bottom: 20px;
-    padding: 8px;
-    background-color: #e9ecef; /* Light background */
-    border-radius: 6px;
-    display: inline-block; /* To fit content */
-}
-#clue-progress span {
-    font-weight: 700;
-}
-
-/* Enhanced Score Visualization */
-
-/* 1. In-Game Score Display (Standard Quizzes) */
-.game-header .score {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #ffffff; /* Assuming dark header */
-    padding: 5px 10px;
-    background-color: rgba(255, 255, 255, 0.15); /* Optional: subtle highlight */
-    border-radius: 4px;
-    /* animation: pulse-score-light 2s infinite ease-in-out; */ /* Optional subtle animation */
-}
-
-/* Optional keyframes for a very subtle pulse, if used */
-/* @keyframes pulse-score-light {
-    0% { background-color: rgba(255, 255, 255, 0.15); }
-    50% { background-color: rgba(255, 255, 255, 0.25); }
-    100% { background-color: rgba(255, 255, 255, 0.15); }
-} */
-
-/* 2. Final Score Display (Result Screen) */
-.result-screen .final-score { /* Class '.final-score' exists in main.526e61d2.css */
-    font-size: 2.8rem; /* Increased size for more impact */
-    font-weight: 700;
-    color: #007bff; /* Primary vibrant blue */
-    margin-top: 20px; /* Adjusted margin */
-    margin-bottom: 30px; /* Adjusted margin */
-    /* text-shadow: 1px 1px 3px rgba(0,0,0,0.1); */ /* Optional */
-}
-
-/* 3. Enhance MLB 21 Questions Win Message */
-/* Styles for mlb_21_questions_page.html #message-area.success */
-/* This selector might need to be more specific if #message-area is used elsewhere without the .success class */
-#message-area.success { /* This class is added by js/mlb_21_ui.js */
-    color: #28a745; /* Existing success green */
-    font-size: 1.5rem; /* Make win message prominent */
-    font-weight: 700;
-    padding: 10px 15px; /* Add some padding */
-    background-color: #e8f5e9; /* Light green background */
-    border-radius: 6px; /* Rounded corners */
-    border: 1px solid #a5d6a7; /* Subtle border */
-    display: inline-block; /* Fit content */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
-}
-
-/* Enhanced Timer Visualization */
-.game-header .timer {
-    font-size: 1.2rem;
-    font-weight: 700; /* Make it bold */
-    color: #ffc107;  /* A warning yellow, stands out on dark headers */
-    padding: 5px 10px;
-    border-radius: 4px;
-    /* background-color: rgba(0, 0, 0, 0.1); */ /* Optional: subtle background, commented out as per example */
-}
-
-.game-header .timer.timer-low {
-    color: #f0ad4e; /* Brighter orange for low time */
-    /* Consider removing background if color alone is enough */
-}
-
-.game-header .timer.timer-critical {
-    color: #dc3545; /* Red for critical time */
-    animation: pulse-timer 1s infinite ease-in-out;
-}
-
-@keyframes pulse-timer {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.08); opacity: 0.85; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-/* Enhanced Streak Counter Visualization */
-.game-header .streak {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #28a745; /* Green for positive streak */
-    padding: 5px 10px;
-    border-radius: 4px;
-    /* background-color: rgba(0, 0, 0, 0.1); */ /* Optional */
-    transition: transform 0.2s ease-out, color 0.2s ease-out; /* For smooth animation reset */
-}
-
-.game-header .streak.streak-increased {
-    /* This class would be added by JS for a short duration */
-    animation: celebrate-streak 0.8s ease-out forwards;
-}
-
-@keyframes celebrate-streak {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    25% {
-        transform: scale(1.3);
-        color: #ffeb3b; /* Bright yellow flash */
-    }
-    50% {
-        transform: scale(1.15);
-        opacity: 0.9;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-        color: #28a745; /* Return to original streak color */
-    }
-}
-
-/* Enhanced Hint Button Visualization */
-.game-controls .hint-button { /* Assuming it's within .game-controls */
-    background-color: #17a2b8; /* A distinct 'info' blue/teal color */
-    color: white;
-    padding: 10px 20px; /* Adjust padding if needed */
-    border-radius: 8px; /* Consistent with other buttons */
-    font-weight: 500;
-    font-size: 0.95rem; /* Slightly smaller or same as other buttons */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
-    /* display: flex; */ /* Uncomment if using icon and text for alignment */
-    /* align-items: center; */
-}
-
-/* Optional: Add a lightbulb icon using a pseudo-element */
-.game-controls .hint-button::before {
-    content: "💡"; /* Lightbulb emoji */
-    margin-right: 8px;
-    font-size: 1.1em; /* Adjust size if needed */
-    /* display: inline-block; */ /* Needed if main button is not flex */
-}
-
-.game-controls .hint-button:hover:not(:disabled) {
-    background-color: #138496; /* Darker shade of the info blue/teal */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
-}
-
-.game-controls .hint-button:active:not(:disabled) {
-    transform: translateY(0px);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    background-color: #117a8b; /* Even darker for active state */
-}
-
-.game-controls .hint-button:disabled {
-    background-color: #bdc3c7; /* Standard disabled style */
-    color: #7f8c8d;
-    opacity: 0.7;
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
-}
-.game-controls .hint-button:disabled::before { /* Optional: Dim icon when disabled */
-   opacity: 0.5;
-}
